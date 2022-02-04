@@ -1,4 +1,5 @@
 
+
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 import time
@@ -27,8 +28,6 @@ class BaseDriver:
             time.sleep(2)
         
         time.sleep(4)
-
-        
 
     def wait_for_presence_of_all_elements(self, locator_type,locator):
         wait = WebDriverWait(self.driver,10)

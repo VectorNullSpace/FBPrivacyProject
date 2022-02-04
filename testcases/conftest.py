@@ -23,6 +23,7 @@ def setup(request,browser,email,password):
     if browser == "chrome":
         options = webdriver.ChromeOptions()
         options.add_experimental_option('excludeSwitches', ['enable-logging'])
+        options.add_argument("--disable-notifications")
 
         s=Service(ChromeDriverManager().install())
         driver= webdriver.Chrome(service=s, options=options) 

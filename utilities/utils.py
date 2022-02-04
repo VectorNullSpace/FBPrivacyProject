@@ -77,4 +77,8 @@ class Utils(softest.TestCase):
 
     def assertOneThing(self,item,value):
         self.soft_assert(self.assertEqual,item,value)
+        if item == value:
+            print("test passed")
+        else:
+            print("test faild")
             

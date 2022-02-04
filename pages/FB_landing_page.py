@@ -58,14 +58,11 @@ class FBLandingPage(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
      
-    def getURL(self):
-        return self.driver.current_url
-
     def loginToFB(self):
         self.enterEmail(self.email)
         self.enterPassword(self.password)
         self.clickLogin()
         # self.log.info("giving 30 seconds to resolve the two factor authentication stuff")
         # time.sleep(30)
-        home_page = self.FBHomePage(self.driver)
-        return home_page
+        # home_page = self.FBHomePage(self.driver)
+        # return home_page
