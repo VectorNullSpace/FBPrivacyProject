@@ -15,7 +15,7 @@ from ddt import ddt, data,unpack, file_data
 
 @pytest.mark.usefixtures("setup")
 @ddt
-class TestSearchAndVerifyFilter(softest.TestCase):
+class TestDeleteOldPosts(softest.TestCase):
     log = Utils.custom_logger()
 
 
