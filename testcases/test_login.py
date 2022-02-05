@@ -35,7 +35,12 @@ class TestDeleteOldPosts(softest.TestCase):
         fb_home = self.lp.loginToFB()
         time.sleep(5)
         fb_userProfile = fb_home.navigateToUserProfile()
-        
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
+        dates = fb_userProfile.getAllDateElements()
+        self.log.info("THE LENGTH OF THE LIST IS {}".format(len(dates)))
+        for date in dates:
+            self.log.info(date.get_attribute("aria-label"))
         assert 2+2 == 4
         
 

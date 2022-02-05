@@ -13,4 +13,10 @@ class UserProfile(BaseDriver):
         self.driver = driver
         self.achains = achains
  
+    POST_ELEMENTS = "//div[@role='article']"
+    POST_ELEMENTS2 = "//div[@data-pagelet='ProfileTimeline']/*"
+    DATE_ELEMENT = "//div[@data-pagelet='ProfileTimeline']/*//div[@class='qzhwtbm6 knvmm38d'][2]//a[@href='#']"
+
+    def getAllDateElements(self):
+        return self.wait_for_presence_of_all_elements(By.XPATH,self.DATE_ELEMENT)
     

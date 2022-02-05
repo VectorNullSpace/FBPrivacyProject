@@ -1,65 +1,21 @@
-Fri 02/04/2022 06:38:27 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 06:38:27 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 06:38:27 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 06:38:27 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 06:38:27 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 06:39:12 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 06:39:12 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 06:39:12 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 06:39:12 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 06:39:12 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 06:40:37 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 06:40:37 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 06:40:37 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 06:40:37 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 06:40:37 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 06:43:12 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 06:43:12 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 06:43:12 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 06:43:12 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 06:43:12 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 06:49:57 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 06:49:57 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 06:49:57 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 06:49:57 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 06:49:57 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 06:56:26 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 06:56:26 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 06:56:26 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 06:56:26 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 06:56:26 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 06:58:52 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 06:58:52 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 06:58:52 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 06:58:52 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 06:58:52 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 06:58:57 PM - INFO - FBHomePage : attempting to click user profile
-Fri 02/04/2022 06:58:57 PM - WARNING - FBHomePage : element did not exist
-Fri 02/04/2022 07:01:21 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 07:01:21 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 07:01:21 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 07:01:21 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 07:01:21 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 07:01:26 PM - INFO - FBHomePage : attempting to click user profile
-Fri 02/04/2022 07:01:26 PM - WARNING - FBHomePage : element did not exist
-Fri 02/04/2022 07:02:06 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 07:02:06 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 07:02:06 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 07:02:06 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 07:02:06 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 07:02:11 PM - INFO - FBHomePage : attempting to click user profile
-Fri 02/04/2022 07:02:11 PM - WARNING - FBHomePage : element did not exist
-Fri 02/04/2022 07:03:09 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 07:03:10 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 07:03:10 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 07:03:10 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 07:03:10 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 07:03:15 PM - INFO - FBHomePage : attempting to click user profile
-Fri 02/04/2022 07:03:15 PM - WARNING - FBHomePage : element did not exist
-Fri 02/04/2022 07:08:08 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 07:08:08 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 07:08:08 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 07:08:08 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 07:08:08 PM - INFO - FBLandingPage : attempting to click loging
-Fri 02/04/2022 07:08:13 PM - INFO - FBHomePage : attempting to click user profile
-Fri 02/04/2022 07:08:13 PM - INFO - FBHomePage : clicked user profile successfully
+Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : attempting to enter email
+Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : Typed email into email field successfully
+Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : attempting to enter password
+Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : Typed password into password field successfully
+Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : attempting to click login
+Fri 02/04/2022 09:26:49 PM - INFO - FBHomePage : attempting to click user profile
+Fri 02/04/2022 09:26:50 PM - INFO - FBHomePage : clicked user profile successfully
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : THE LENGTH OF THE LIST IS 13
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : 4d
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : 4d
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : 5d
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : January 28 at 6:44 AM
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : July 13, 2020
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : January 18 at 11:05 PM
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : January 11 at 9:48 PM
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : November 4, 2021
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : October 22, 2021
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : September 15, 2021
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : August 27, 2021
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : September 2, 2021
+Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : August 12, 2021
