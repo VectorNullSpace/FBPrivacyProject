@@ -11,6 +11,7 @@ import pytest
 from utilities.utils import Utils
 from pages.FB_landing_page import FBLandingPage
 from ddt import ddt, data,unpack, file_data
+import time
 
 
 @pytest.mark.usefixtures("setup")
@@ -31,7 +32,10 @@ class TestDeleteOldPosts(softest.TestCase):
     # @file_data("../testdata/data_json.json")
     def test_login_to_fb(self):
         #note four arguments and four per test case in the data tag
-        fb_user = self.lp.loginToFB()
+        fb_home = self.lp.loginToFB()
+        time.sleep(5)
+        fb_userProfile = fb_home.navigateToUserProfile()
+        
         assert 2+2 == 4
         
 

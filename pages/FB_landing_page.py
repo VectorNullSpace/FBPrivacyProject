@@ -52,7 +52,7 @@ class FBLandingPage(BaseDriver):
             self.log.warning("element did not exist")
 
     def clickLogin(self):
-        self.log.info("attempting to click loging")
+        self.log.info("attempting to click login")
         try:
             self.getLoginButton().click()
         except NoSuchElementException:
@@ -64,5 +64,5 @@ class FBLandingPage(BaseDriver):
         self.clickLogin()
         # self.log.info("giving 30 seconds to resolve the two factor authentication stuff")
         # time.sleep(30)
-        # home_page = self.FBHomePage(self.driver)
-        # return home_page
+        home_page = FBHomePage(self.driver,self.achains)
+        return home_page
