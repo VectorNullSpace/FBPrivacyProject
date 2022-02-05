@@ -1,21 +1,52 @@
-Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : attempting to enter email
-Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : Typed email into email field successfully
-Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : attempting to enter password
-Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : Typed password into password field successfully
-Fri 02/04/2022 09:26:44 PM - INFO - FBLandingPage : attempting to click login
-Fri 02/04/2022 09:26:49 PM - INFO - FBHomePage : attempting to click user profile
-Fri 02/04/2022 09:26:50 PM - INFO - FBHomePage : clicked user profile successfully
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : THE LENGTH OF THE LIST IS 13
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : 4d
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : 4d
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : 5d
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : January 28 at 6:44 AM
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : July 13, 2020
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : January 18 at 11:05 PM
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : January 11 at 9:48 PM
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : November 4, 2021
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : October 22, 2021
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : September 15, 2021
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : August 27, 2021
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : September 2, 2021
-Fri 02/04/2022 09:27:02 PM - INFO - TestDeleteOldPosts : August 12, 2021
+Sat 02/05/2022 12:21:47 AM - INFO - FBLandingPage : attempting to enter email
+Sat 02/05/2022 12:21:47 AM - INFO - FBLandingPage : Typed email into email field successfully
+Sat 02/05/2022 12:21:47 AM - INFO - FBLandingPage : attempting to enter password
+Sat 02/05/2022 12:21:48 AM - INFO - FBLandingPage : Typed password into password field successfully
+Sat 02/05/2022 12:21:48 AM - INFO - FBLandingPage : attempting to click login
+Sat 02/05/2022 12:21:50 AM - INFO - FBHomePage : attempting to click user profile
+Sat 02/05/2022 12:21:52 AM - INFO - FBHomePage : clicked user profile successfully
+Sat 02/05/2022 12:22:02 AM - INFO - TestDeleteOldPosts : 
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : THE LENGTH OF THE LIST IS 10
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : 4d
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : January 28 at 6:44 AM
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : January 18 at 11:05 PM
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : JP Payano
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : January 11 at 9:48 PM
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : JP Payano
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : November 4, 2021
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : September 15, 2021
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : JP Payano
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : September 2, 2021
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
+Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:14 AM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 12:22:14 AM - INFO - TestDeleteOldPosts : no child element found
+Sat 02/05/2022 12:22:24 AM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 12:22:24 AM - INFO - TestDeleteOldPosts : no child element found
+Sat 02/05/2022 12:22:24 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:34 AM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 12:22:34 AM - INFO - TestDeleteOldPosts : no child element found
+Sat 02/05/2022 12:22:44 AM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 12:22:44 AM - INFO - TestDeleteOldPosts : no child element found
+Sat 02/05/2022 12:22:44 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:22:54 AM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 12:22:54 AM - INFO - TestDeleteOldPosts : no child element found
+Sat 02/05/2022 12:23:04 AM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 12:23:04 AM - INFO - TestDeleteOldPosts : no child element found
+Sat 02/05/2022 12:23:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
+Sat 02/05/2022 12:26:19 AM - INFO - FBLandingPage : attempting to enter email
+Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : Typed email into email field successfully
+Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : attempting to enter password
+Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : Typed password into password field successfully
+Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : attempting to click login
+Sat 02/05/2022 12:26:22 AM - INFO - FBHomePage : attempting to click user profile
+Sat 02/05/2022 12:26:25 AM - INFO - FBHomePage : clicked user profile successfully

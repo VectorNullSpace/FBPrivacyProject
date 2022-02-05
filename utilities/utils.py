@@ -81,4 +81,10 @@ class Utils(softest.TestCase):
             print("test passed")
         else:
             print("test faild")
-            
+
+    def does_text_match(firstitem,seconditem):
+
+        if firstitem == seconditem:
+            return True
+        else:
+            return False

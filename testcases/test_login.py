@@ -33,14 +33,20 @@ class TestDeleteOldPosts(softest.TestCase):
     def test_login_to_fb(self):
         #note four arguments and four per test case in the data tag
         fb_home = self.lp.loginToFB()
-        time.sleep(5)
+        time.sleep(2)
         fb_userProfile = fb_home.navigateToUserProfile()
+        username = fb_userProfile.get_users_name()
+        self.log.info(username)
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
-        dates = fb_userProfile.getAllDateElements()
-        self.log.info("THE LENGTH OF THE LIST IS {}".format(len(dates)))
-        for date in dates:
-            self.log.info(date.get_attribute("aria-label"))
+        posts = fb_userProfile.getAllPosts()
+        self.log.info("THE LENGTH OF THE LIST IS {}".format(len(posts)))
+        for post in posts:
+            self.log.info(fb_userProfile.getDateFromPost(post))
+            poster = fb_userProfile.getNameOfPoster(post)
+            self.log.info(poster)
+            self.log.info("text match returns{}".format(Utils.does_text_match(username,poster)))
+
         assert 2+2 == 4
         
 

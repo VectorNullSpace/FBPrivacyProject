@@ -3,6 +3,8 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 import time
+from selenium.common.exceptions import NoSuchElementException
+
 #for anything extending the driver
 
 
@@ -34,3 +36,10 @@ class BaseDriver:
         list_of_elements = wait.until(EC.presence_of_all_elements_located((locator_type,locator)))
         # allstops = self.driver.find_elements(By.XPATH,"//span[contains(text(),'Non Stop') or contains(text(), '1 Stop') or contains(text(), '2 Stop')]")
         return list_of_elements
+
+    def get_child_elemenet(self,locator_type,parent,child_locator):
+        try:
+            return parent.find_element(locator_type,child_locator)
+        except NoSuchElementException:
+            self.log.warning("childe element did not exist")
+            return "no child element found"
