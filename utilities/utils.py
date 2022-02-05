@@ -3,6 +3,8 @@ import softest
 import logging
 from openpyxl import Workbook, load_workbook
 import csv
+import datetime
+
 
 
 class Utils(softest.TestCase):
@@ -88,3 +90,15 @@ class Utils(softest.TestCase):
             return True
         else:
             return False
+
+    def validate(date_text):
+        matching = False
+        try:
+            datetime.datetime.strptime(date_text, '%B %d, %Y')
+            matching =  True
+        except:
+            # raise ValueError("Incorrect data format, should be YYYY-MM-DD")
+            matching =  False
+        finally:
+            return matching
+

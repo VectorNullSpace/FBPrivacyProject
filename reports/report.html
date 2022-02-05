@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>JP&apos;s Automation Report</h1>
-    <p>Report generated on 05-Feb-2022 at 00:26:40 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 05-Feb-2022 at 14:05:48 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,8 +259,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.9.10</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 22.08 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>1 tests ran in 83.21 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,16 +271,15 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="failed results-table-row">
+      <tbody class="passed results-table-row">
         <tr>
-          <td class="col-result">Failed</td>
+          <td class="col-result">Passed</td>
           <td class="col-name">testcases/test_login.py::TestDeleteOldPosts::test_login_to_fb</td>
-          <td class="col-duration">21.59</td>
+          <td class="col-duration">83.02</td>
           <td class="col-links"><a class="url" href="http://www.facebook.com/" target="_blank">URL</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div><div><img src="testcases/test_login.py_TestDeleteOldPosts_test_login_to_fb.png" alt="screenshot" style="width:300px;height:200px"onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log">self = &lt;test_login.TestDeleteOldPosts testMethod=test_login_to_fb&gt;<br/><br/>    def test_login_to_fb(self):<br/>        #note four arguments and four per test case in the data tag<br/>        fb_home = self.lp.loginToFB()<br/>        time.sleep(2)<br/>        fb_userProfile = fb_home.navigateToUserProfile()<br/>&gt;       username = fb_userProfile.get_users_name()<br/><br/>testcases\test_login.py:38: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;pages.FB_user_profile_page.UserProfile object at 0x000001BD37ABA580&gt;<br/><br/>    def get_users_name(self):<br/>&gt;       return self.driver.getText(self.driver.find_element(By.XPATH,self.USERS_NAME))<br/><span class="error">E       AttributeError: &#x27;WebDriver&#x27; object has no attribute &#x27;getText&#x27;</span><br/><br/>pages\FB_user_profile_page.py:26: AttributeError<br/> -----------------------------Captured stderr setup------------------------------ <br/>
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
 
 ====== WebDriver manager ======
 Current google-chrome version is 97.0.4692
@@ -297,4 +296,52 @@ INFO     FBLandingPage:FB_landing_page.py:46 attempting to enter password
 INFO     FBLandingPage:FB_landing_page.py:50 Typed password into password field successfully
 INFO     FBLandingPage:FB_landing_page.py:55 attempting to click login
 INFO     FBHomePage:FB_home_page.py:23 attempting to click user profile
-INFO     FBHomePage:FB_home_page.py:27 clicked user profile successfully<br/></div></td></tr></tbody></table></body></html>
+INFO     FBHomePage:FB_home_page.py:27 clicked user profile successfully
+INFO     UserProfile:FB_user_profile_page.py:48 Home
+INFO     UserProfile:FB_user_profile_page.py:52 THE LENGTH OF THE LIST IS 10
+INFO     UserProfile:FB_user_profile_page.py:55 5d
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? False
+INFO     UserProfile:FB_user_profile_page.py:58 Gabriela Avecillas
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+INFO     UserProfile:FB_user_profile_page.py:55 January 28 at 6:44 AM
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? False
+INFO     UserProfile:FB_user_profile_page.py:58 Gabriela Avecillas
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+INFO     UserProfile:FB_user_profile_page.py:55 January 18 at 11:05 PM
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? False
+INFO     UserProfile:FB_user_profile_page.py:58 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+INFO     UserProfile:FB_user_profile_page.py:55 January 11 at 9:48 PM
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? False
+INFO     UserProfile:FB_user_profile_page.py:58 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+INFO     UserProfile:FB_user_profile_page.py:55 November 4, 2021
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:58 Gabriela Avecillas
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+INFO     UserProfile:FB_user_profile_page.py:55 September 15, 2021
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:58 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+INFO     UserProfile:FB_user_profile_page.py:55 September 2, 2021
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:58 Gabriela Avecillas
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:55 no child element found
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? False
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:58 no child element found
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:55 no child element found
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? False
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:58 no child element found
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse 
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:55 no child element found
+INFO     UserProfile:FB_user_profile_page.py:56 Does the date match the proper format? False
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:58 no child element found
+INFO     UserProfile:FB_user_profile_page.py:59 text match returnsFalse<br/></div></td></tr></tbody></table></body></html>

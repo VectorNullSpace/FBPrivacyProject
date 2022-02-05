@@ -1,52 +1,165 @@
-Sat 02/05/2022 12:21:47 AM - INFO - FBLandingPage : attempting to enter email
-Sat 02/05/2022 12:21:47 AM - INFO - FBLandingPage : Typed email into email field successfully
-Sat 02/05/2022 12:21:47 AM - INFO - FBLandingPage : attempting to enter password
-Sat 02/05/2022 12:21:48 AM - INFO - FBLandingPage : Typed password into password field successfully
-Sat 02/05/2022 12:21:48 AM - INFO - FBLandingPage : attempting to click login
-Sat 02/05/2022 12:21:50 AM - INFO - FBHomePage : attempting to click user profile
-Sat 02/05/2022 12:21:52 AM - INFO - FBHomePage : clicked user profile successfully
-Sat 02/05/2022 12:22:02 AM - INFO - TestDeleteOldPosts : 
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : THE LENGTH OF THE LIST IS 10
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : 4d
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : January 28 at 6:44 AM
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : January 18 at 11:05 PM
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : JP Payano
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : January 11 at 9:48 PM
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : JP Payano
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : November 4, 2021
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : September 15, 2021
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : JP Payano
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : September 2, 2021
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : Gabriela Avecillas
-Sat 02/05/2022 12:22:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:14 AM - WARNING - UserProfile : childe element did not exist
-Sat 02/05/2022 12:22:14 AM - INFO - TestDeleteOldPosts : no child element found
-Sat 02/05/2022 12:22:24 AM - WARNING - UserProfile : childe element did not exist
-Sat 02/05/2022 12:22:24 AM - INFO - TestDeleteOldPosts : no child element found
-Sat 02/05/2022 12:22:24 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:34 AM - WARNING - UserProfile : childe element did not exist
-Sat 02/05/2022 12:22:34 AM - INFO - TestDeleteOldPosts : no child element found
-Sat 02/05/2022 12:22:44 AM - WARNING - UserProfile : childe element did not exist
-Sat 02/05/2022 12:22:44 AM - INFO - TestDeleteOldPosts : no child element found
-Sat 02/05/2022 12:22:44 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:22:54 AM - WARNING - UserProfile : childe element did not exist
-Sat 02/05/2022 12:22:54 AM - INFO - TestDeleteOldPosts : no child element found
-Sat 02/05/2022 12:23:04 AM - WARNING - UserProfile : childe element did not exist
-Sat 02/05/2022 12:23:04 AM - INFO - TestDeleteOldPosts : no child element found
-Sat 02/05/2022 12:23:04 AM - INFO - TestDeleteOldPosts : text match returnsFalse
-Sat 02/05/2022 12:26:19 AM - INFO - FBLandingPage : attempting to enter email
-Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : Typed email into email field successfully
-Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : attempting to enter password
-Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : Typed password into password field successfully
-Sat 02/05/2022 12:26:20 AM - INFO - FBLandingPage : attempting to click login
-Sat 02/05/2022 12:26:22 AM - INFO - FBHomePage : attempting to click user profile
-Sat 02/05/2022 12:26:25 AM - INFO - FBHomePage : clicked user profile successfully
+Sat 02/05/2022 02:00:14 PM - INFO - FBLandingPage : attempting to enter email
+Sat 02/05/2022 02:00:14 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sat 02/05/2022 02:00:14 PM - INFO - FBLandingPage : attempting to enter password
+Sat 02/05/2022 02:00:14 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sat 02/05/2022 02:00:14 PM - INFO - FBLandingPage : attempting to click login
+Sat 02/05/2022 02:00:16 PM - INFO - FBHomePage : attempting to click user profile
+Sat 02/05/2022 02:00:18 PM - INFO - FBHomePage : clicked user profile successfully
+Sat 02/05/2022 02:00:28 PM - INFO - UserProfile : Home
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 10
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : 5d
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : January 28 at 6:44 AM
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : January 18 at 11:05 PM
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : January 11 at 9:48 PM
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : November 4, 2021
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : September 15, 2021
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : September 2, 2021
+Sat 02/05/2022 02:00:30 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:00:31 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:00:31 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:00:41 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:00:41 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:00:41 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:00:51 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:00:51 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:00:51 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:01:01 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:01:01 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:01:01 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:01:11 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:01:11 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:01:11 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:01:21 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:01:21 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:01:21 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:01:31 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:01:31 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:01:31 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:18 PM - INFO - FBLandingPage : attempting to enter email
+Sat 02/05/2022 02:02:18 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sat 02/05/2022 02:02:18 PM - INFO - FBLandingPage : attempting to enter password
+Sat 02/05/2022 02:02:18 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sat 02/05/2022 02:02:18 PM - INFO - FBLandingPage : attempting to click login
+Sat 02/05/2022 02:02:20 PM - INFO - FBHomePage : attempting to click user profile
+Sat 02/05/2022 02:02:22 PM - INFO - FBHomePage : clicked user profile successfully
+Sat 02/05/2022 02:02:32 PM - INFO - UserProfile : None
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 10
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : 5d
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : January 28 at 6:44 AM
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : January 18 at 11:05 PM
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : January 11 at 9:48 PM
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : November 4, 2021
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : September 15, 2021
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : September 2, 2021
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:02:34 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:02:45 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:02:45 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:02:45 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:02:55 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:02:55 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:02:55 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:03:05 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:03:05 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:03:05 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:03:15 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:03:15 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:03:15 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:03:25 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:03:25 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:03:25 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:03:35 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:03:35 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:03:35 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:27 PM - INFO - FBLandingPage : attempting to enter email
+Sat 02/05/2022 02:04:27 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sat 02/05/2022 02:04:27 PM - INFO - FBLandingPage : attempting to enter password
+Sat 02/05/2022 02:04:27 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sat 02/05/2022 02:04:27 PM - INFO - FBLandingPage : attempting to click login
+Sat 02/05/2022 02:04:29 PM - INFO - FBHomePage : attempting to click user profile
+Sat 02/05/2022 02:04:31 PM - INFO - FBHomePage : clicked user profile successfully
+Sat 02/05/2022 02:04:41 PM - INFO - UserProfile : Home
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 10
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : 5d
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : January 28 at 6:44 AM
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : January 18 at 11:05 PM
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : January 11 at 9:48 PM
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : November 4, 2021
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : September 15, 2021
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : JP Payano
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : September 2, 2021
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Does the date match the proper format? True
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : Gabriela Avecillas
+Sat 02/05/2022 02:04:43 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:04:53 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:04:53 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:04:53 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:05:04 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:05:04 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:05:04 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:05:14 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:05:14 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:05:14 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:05:24 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:05:24 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:05:24 PM - INFO - UserProfile : text match returnsFalse 
+Sat 02/05/2022 02:05:34 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:05:34 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:05:34 PM - INFO - UserProfile : Does the date match the proper format? False
+Sat 02/05/2022 02:05:44 PM - WARNING - UserProfile : childe element did not exist
+Sat 02/05/2022 02:05:44 PM - INFO - UserProfile : no child element found
+Sat 02/05/2022 02:05:44 PM - INFO - UserProfile : text match returnsFalse 

@@ -35,18 +35,7 @@ class TestDeleteOldPosts(softest.TestCase):
         fb_home = self.lp.loginToFB()
         time.sleep(2)
         fb_userProfile = fb_home.navigateToUserProfile()
-        username = fb_userProfile.get_users_name()
-        self.log.info(username)
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2)
-        posts = fb_userProfile.getAllPosts()
-        self.log.info("THE LENGTH OF THE LIST IS {}".format(len(posts)))
-        for post in posts:
-            self.log.info(fb_userProfile.getDateFromPost(post))
-            poster = fb_userProfile.getNameOfPoster(post)
-            self.log.info(poster)
-            self.log.info("text match returns{}".format(Utils.does_text_match(username,poster)))
-
+        fb_userProfile.go_through_posts()
         assert 2+2 == 4
         
 
