@@ -3,7 +3,7 @@
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 import time
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, StaleElementReferenceException
 
 #for anything extending the driver
 
@@ -43,3 +43,18 @@ class BaseDriver:
         except NoSuchElementException:
             self.log.warning("childe element did not exist")
             return "no child element found"
+
+    def scroll_to_element(self,element):
+        try:
+            self.driver.execute_script("arguments[0].scrollIntoView();", element)
+            time.sleep(1)
+        except StaleElementReferenceException:
+            self.driver.execute_script("window.scrollBy(0 , 2000 );")
+            self.log.warning("stale reference")
+            time.sleep(1)
+            # self.driver.execute_script("arguments[0].scrollIntoView();", element)
+
+
+
+    def zoom_out(self):
+        self.driver.execute_script("document.body.style['-webkit-transform'] = \"scale(0.5)\";")
