@@ -1,469 +1,115 @@
 
-Sun 02/06/2022 12:35:24 PM - INFO - FBLandingPage : attempting to enter email
-Sun 02/06/2022 12:35:24 PM - INFO - FBLandingPage : Typed email into email field successfully
-Sun 02/06/2022 12:35:24 PM - INFO - FBLandingPage : attempting to enter password
-Sun 02/06/2022 12:35:24 PM - INFO - FBLandingPage : Typed password into password field successfully
-Sun 02/06/2022 12:35:24 PM - INFO - FBLandingPage : attempting to click login
-Sun 02/06/2022 12:35:26 PM - INFO - FBHomePage : attempting to click user profile
-Sun 02/06/2022 12:35:28 PM - INFO - FBHomePage : clicked user profile successfully
-Sun 02/06/2022 12:35:38 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:35:45 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 7
-Sun 02/06/2022 12:35:46 PM - INFO - UserProfile : 6d
-Sun 02/06/2022 12:35:46 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:35:46 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:35:46 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:16 PM - INFO - FBLandingPage : attempting to enter email
-Sun 02/06/2022 12:37:16 PM - INFO - FBLandingPage : Typed email into email field successfully
-Sun 02/06/2022 12:37:16 PM - INFO - FBLandingPage : attempting to enter password
-Sun 02/06/2022 12:37:16 PM - INFO - FBLandingPage : Typed password into password field successfully
-Sun 02/06/2022 12:37:16 PM - INFO - FBLandingPage : attempting to click login
-Sun 02/06/2022 12:37:18 PM - INFO - FBHomePage : attempting to click user profile
-Sun 02/06/2022 12:37:20 PM - INFO - FBHomePage : clicked user profile successfully
-Sun 02/06/2022 12:37:30 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:37 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 7
-Sun 02/06/2022 12:37:38 PM - INFO - UserProfile : 6d
-Sun 02/06/2022 12:37:38 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:38 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:38 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:39 PM - INFO - UserProfile : January 28 at 6:44 AM
-Sun 02/06/2022 12:37:39 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:39 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:39 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:40 PM - INFO - UserProfile : January 18 at 11:05 PM
-Sun 02/06/2022 12:37:40 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:40 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:40 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:41 PM - INFO - UserProfile : January 11 at 9:48 PM
-Sun 02/06/2022 12:37:41 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:41 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:41 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:42 PM - INFO - UserProfile : November 4, 2021
-Sun 02/06/2022 12:37:42 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:42 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:42 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:42 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:43 PM - INFO - UserProfile : September 15, 2021
-Sun 02/06/2022 12:37:43 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:43 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:43 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:43 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:44 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 12:37:44 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:44 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:44 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:44 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:44 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 11
-Sun 02/06/2022 12:37:45 PM - INFO - UserProfile : 6d
-Sun 02/06/2022 12:37:45 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:45 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:45 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:46 PM - INFO - UserProfile : January 28 at 6:44 AM
-Sun 02/06/2022 12:37:46 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:46 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:46 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:47 PM - INFO - UserProfile : January 18 at 11:05 PM
-Sun 02/06/2022 12:37:47 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:47 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:47 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:48 PM - INFO - UserProfile : January 11 at 9:48 PM
-Sun 02/06/2022 12:37:48 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:48 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:48 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:50 PM - INFO - UserProfile : November 4, 2021
-Sun 02/06/2022 12:37:50 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:50 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:50 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:50 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:51 PM - INFO - UserProfile : September 15, 2021
-Sun 02/06/2022 12:37:51 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:51 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:51 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:51 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:52 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 12:37:52 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:52 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:52 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:52 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:53 PM - INFO - UserProfile : August 18, 2021
-Sun 02/06/2022 12:37:53 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:53 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:53 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:53 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:54 PM - INFO - UserProfile : July 27, 2021
-Sun 02/06/2022 12:37:54 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:54 PM - INFO - UserProfile : Miguel Rodriguez
-Sun 02/06/2022 12:37:54 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:54 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:55 PM - INFO - UserProfile : July 21, 2021
-Sun 02/06/2022 12:37:55 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:55 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:55 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:55 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:56 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:37:56 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:37:56 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:56 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:37:56 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:37:56 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 15
-Sun 02/06/2022 12:37:57 PM - INFO - UserProfile : 6d
-Sun 02/06/2022 12:37:57 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:57 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:57 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:58 PM - INFO - UserProfile : January 28 at 6:44 AM
-Sun 02/06/2022 12:37:58 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:58 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:37:58 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:37:59 PM - INFO - UserProfile : January 18 at 11:05 PM
-Sun 02/06/2022 12:37:59 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:37:59 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:37:59 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:00 PM - INFO - UserProfile : January 11 at 9:48 PM
-Sun 02/06/2022 12:38:00 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:00 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:00 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:01 PM - INFO - UserProfile : November 4, 2021
-Sun 02/06/2022 12:38:01 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:01 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:01 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:01 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:02 PM - INFO - UserProfile : September 15, 2021
-Sun 02/06/2022 12:38:02 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:02 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:02 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:02 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:03 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 12:38:03 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:03 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:03 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:03 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:04 PM - INFO - UserProfile : August 18, 2021
-Sun 02/06/2022 12:38:04 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:04 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:04 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:04 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:05 PM - INFO - UserProfile : July 27, 2021
-Sun 02/06/2022 12:38:05 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:05 PM - INFO - UserProfile : Miguel Rodriguez
-Sun 02/06/2022 12:38:05 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:05 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:07 PM - INFO - UserProfile : July 21, 2021
-Sun 02/06/2022 12:38:07 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:07 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:07 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:07 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:08 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:38:08 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:08 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:08 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:08 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:09 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:38:09 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:09 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:09 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:09 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:10 PM - INFO - UserProfile : June 24, 2021
-Sun 02/06/2022 12:38:10 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:10 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:10 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:10 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:11 PM - INFO - UserProfile : June 11, 2021
-Sun 02/06/2022 12:38:11 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:11 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:11 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:11 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:12 PM - INFO - UserProfile : June 6, 2021
-Sun 02/06/2022 12:38:12 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:12 PM - INFO - UserProfile : Tony Nguyen
-Sun 02/06/2022 12:38:12 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:12 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:12 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 19
-Sun 02/06/2022 12:38:13 PM - INFO - UserProfile : 6d
-Sun 02/06/2022 12:38:13 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:13 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:13 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:14 PM - INFO - UserProfile : January 28 at 6:44 AM
-Sun 02/06/2022 12:38:14 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:14 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:14 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:15 PM - INFO - UserProfile : January 18 at 11:05 PM
-Sun 02/06/2022 12:38:15 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:15 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:15 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:16 PM - INFO - UserProfile : January 11 at 9:48 PM
-Sun 02/06/2022 12:38:16 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:16 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:16 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:17 PM - INFO - UserProfile : November 4, 2021
-Sun 02/06/2022 12:38:17 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:17 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:17 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:17 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:18 PM - INFO - UserProfile : September 15, 2021
-Sun 02/06/2022 12:38:18 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:18 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:18 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:18 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:19 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 12:38:19 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:19 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:19 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:19 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:20 PM - INFO - UserProfile : August 18, 2021
-Sun 02/06/2022 12:38:20 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:20 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:20 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:20 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:21 PM - INFO - UserProfile : July 27, 2021
-Sun 02/06/2022 12:38:21 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:21 PM - INFO - UserProfile : Miguel Rodriguez
-Sun 02/06/2022 12:38:21 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:21 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:22 PM - INFO - UserProfile : July 21, 2021
-Sun 02/06/2022 12:38:22 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:23 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:23 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:23 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:24 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:38:24 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:24 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:24 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:24 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:25 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:38:25 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:25 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:25 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:25 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:26 PM - INFO - UserProfile : June 24, 2021
-Sun 02/06/2022 12:38:26 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:26 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:26 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:26 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:27 PM - INFO - UserProfile : June 11, 2021
-Sun 02/06/2022 12:38:27 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:27 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:27 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:27 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:28 PM - INFO - UserProfile : June 6, 2021
-Sun 02/06/2022 12:38:28 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:28 PM - INFO - UserProfile : Tony Nguyen
-Sun 02/06/2022 12:38:28 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:28 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:29 PM - INFO - UserProfile : May 30, 2021
-Sun 02/06/2022 12:38:29 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:29 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:29 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:29 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:30 PM - INFO - UserProfile : May 25, 2021
-Sun 02/06/2022 12:38:30 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:30 PM - INFO - UserProfile : Nicole Kauffman
-Sun 02/06/2022 12:38:30 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:30 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:31 PM - INFO - UserProfile : May 24, 2021
-Sun 02/06/2022 12:38:31 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:31 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:31 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:31 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:32 PM - INFO - UserProfile : May 11, 2021
-Sun 02/06/2022 12:38:32 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:32 PM - INFO - UserProfile : Nicole Kauffman
-Sun 02/06/2022 12:38:32 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:32 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:32 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 23
-Sun 02/06/2022 12:38:33 PM - INFO - UserProfile : 6d
-Sun 02/06/2022 12:38:33 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:33 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:33 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:34 PM - INFO - UserProfile : January 28 at 6:44 AM
-Sun 02/06/2022 12:38:34 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:34 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:34 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:35 PM - INFO - UserProfile : January 18 at 11:05 PM
-Sun 02/06/2022 12:38:35 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:35 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:35 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:36 PM - INFO - UserProfile : January 11 at 9:48 PM
-Sun 02/06/2022 12:38:36 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:36 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:36 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:37 PM - INFO - UserProfile : November 4, 2021
-Sun 02/06/2022 12:38:37 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:37 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:37 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:37 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:39 PM - INFO - UserProfile : September 15, 2021
-Sun 02/06/2022 12:38:39 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:39 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:39 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:39 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:40 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 12:38:40 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:40 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:40 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:40 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:41 PM - INFO - UserProfile : August 18, 2021
-Sun 02/06/2022 12:38:41 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:41 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:41 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:41 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:42 PM - INFO - UserProfile : July 27, 2021
-Sun 02/06/2022 12:38:42 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:42 PM - INFO - UserProfile : Miguel Rodriguez
-Sun 02/06/2022 12:38:42 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:42 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:43 PM - INFO - UserProfile : July 21, 2021
-Sun 02/06/2022 12:38:43 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:43 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:43 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:43 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:44 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:38:44 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:44 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:44 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:44 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:45 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:38:45 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:45 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:45 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:45 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:46 PM - INFO - UserProfile : June 24, 2021
-Sun 02/06/2022 12:38:46 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:46 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:46 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:46 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:47 PM - INFO - UserProfile : June 11, 2021
-Sun 02/06/2022 12:38:47 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:47 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:47 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:47 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:48 PM - INFO - UserProfile : June 6, 2021
-Sun 02/06/2022 12:38:48 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:48 PM - INFO - UserProfile : Tony Nguyen
-Sun 02/06/2022 12:38:48 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:48 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:49 PM - INFO - UserProfile : May 30, 2021
-Sun 02/06/2022 12:38:49 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:49 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:49 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:49 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:50 PM - INFO - UserProfile : May 25, 2021
-Sun 02/06/2022 12:38:50 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:50 PM - INFO - UserProfile : Nicole Kauffman
-Sun 02/06/2022 12:38:50 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:50 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:51 PM - INFO - UserProfile : May 24, 2021
-Sun 02/06/2022 12:38:51 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:51 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:51 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:51 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:52 PM - INFO - UserProfile : May 11, 2021
-Sun 02/06/2022 12:38:52 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:52 PM - INFO - UserProfile : Nicole Kauffman
-Sun 02/06/2022 12:38:52 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:52 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:53 PM - INFO - UserProfile : May 8, 2021
-Sun 02/06/2022 12:38:53 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:53 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:53 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:53 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:55 PM - INFO - UserProfile : May 1, 2021
-Sun 02/06/2022 12:38:55 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:55 PM - INFO - UserProfile : Nicole Kauffman
-Sun 02/06/2022 12:38:55 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:55 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:56 PM - INFO - UserProfile : April 28, 2021
-Sun 02/06/2022 12:38:56 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:56 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:56 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:56 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:57 PM - INFO - UserProfile : April 18, 2021
-Sun 02/06/2022 12:38:57 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:38:57 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:38:57 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:38:57 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:38:57 PM - INFO - UserProfile : THE LENGTH OF THE LIST IS 27
-Sun 02/06/2022 12:38:58 PM - INFO - UserProfile : 6d
-Sun 02/06/2022 12:38:58 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:58 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:58 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:38:59 PM - INFO - UserProfile : January 28 at 6:44 AM
-Sun 02/06/2022 12:38:59 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:38:59 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:38:59 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:39:00 PM - INFO - UserProfile : January 18 at 11:05 PM
-Sun 02/06/2022 12:39:00 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:39:00 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:00 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:01 PM - INFO - UserProfile : January 11 at 9:48 PM
-Sun 02/06/2022 12:39:01 PM - INFO - UserProfile : Does the date match the proper format? False
-Sun 02/06/2022 12:39:01 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:01 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:02 PM - INFO - UserProfile : November 4, 2021
-Sun 02/06/2022 12:39:02 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:02 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:39:02 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:39:02 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:03 PM - INFO - UserProfile : September 15, 2021
-Sun 02/06/2022 12:39:03 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:03 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:03 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:03 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:04 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 12:39:04 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:04 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:39:04 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:39:04 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:05 PM - INFO - UserProfile : August 18, 2021
-Sun 02/06/2022 12:39:05 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:05 PM - INFO - UserProfile : Gabriela Avecillas
-Sun 02/06/2022 12:39:05 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:39:05 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:06 PM - INFO - UserProfile : July 27, 2021
-Sun 02/06/2022 12:39:06 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:06 PM - INFO - UserProfile : Miguel Rodriguez
-Sun 02/06/2022 12:39:06 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:39:06 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:07 PM - INFO - UserProfile : July 21, 2021
-Sun 02/06/2022 12:39:07 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:07 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:07 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:07 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:08 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:39:08 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:08 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:08 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:08 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:10 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 12:39:10 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:10 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:10 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:10 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:11 PM - INFO - UserProfile : June 24, 2021
-Sun 02/06/2022 12:39:11 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:11 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:11 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:11 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:12 PM - INFO - UserProfile : June 11, 2021
-Sun 02/06/2022 12:39:12 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:12 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:12 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:12 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:13 PM - INFO - UserProfile : June 6, 2021
-Sun 02/06/2022 12:39:13 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:13 PM - INFO - UserProfile : Tony Nguyen
-Sun 02/06/2022 12:39:13 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:39:13 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:14 PM - INFO - UserProfile : May 30, 2021
-Sun 02/06/2022 12:39:14 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:14 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:14 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:14 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:15 PM - INFO - UserProfile : May 25, 2021
-Sun 02/06/2022 12:39:15 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:15 PM - INFO - UserProfile : Nicole Kauffman
-Sun 02/06/2022 12:39:15 PM - INFO - UserProfile : text match returns False
-Sun 02/06/2022 12:39:15 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
-Sun 02/06/2022 12:39:16 PM - INFO - UserProfile : May 24, 2021
-Sun 02/06/2022 12:39:16 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 12:39:16 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 12:39:16 PM - INFO - UserProfile : text match returns True
-Sun 02/06/2022 12:39:16 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2020)
+Sun 02/06/2022 01:46:12 PM - INFO - FBLandingPage : attempting to enter email
+Sun 02/06/2022 01:46:12 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sun 02/06/2022 01:46:12 PM - INFO - FBLandingPage : attempting to enter password
+Sun 02/06/2022 01:46:13 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sun 02/06/2022 01:46:13 PM - INFO - FBLandingPage : attempting to click login
+Sun 02/06/2022 01:46:15 PM - INFO - FBHomePage : attempting to click user profile
+Sun 02/06/2022 01:46:18 PM - INFO - FBHomePage : clicked user profile successfully
+Sun 02/06/2022 01:46:28 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
+Sun 02/06/2022 01:46:36 PM - INFO - UserProfile : September 2, 2021
+Sun 02/06/2022 01:46:36 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:46:36 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:46:39 PM - INFO - UserProfile : July 11, 2021
+Sun 02/06/2022 01:46:39 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:46:39 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:46:42 PM - INFO - UserProfile : June 6, 2021
+Sun 02/06/2022 01:46:42 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:46:42 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:46:45 PM - INFO - UserProfile : May 30, 2021
+Sun 02/06/2022 01:46:45 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:46:45 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:48:31 PM - INFO - FBLandingPage : attempting to enter email
+Sun 02/06/2022 01:48:31 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sun 02/06/2022 01:48:31 PM - INFO - FBLandingPage : attempting to enter password
+Sun 02/06/2022 01:48:31 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sun 02/06/2022 01:48:31 PM - INFO - FBLandingPage : attempting to click login
+Sun 02/06/2022 01:48:33 PM - INFO - FBHomePage : attempting to click user profile
+Sun 02/06/2022 01:48:35 PM - INFO - FBHomePage : clicked user profile successfully
+Sun 02/06/2022 01:48:45 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
+Sun 02/06/2022 01:48:52 PM - INFO - UserProfile : September 2, 2021
+Sun 02/06/2022 01:48:52 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:48:52 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:48:54 PM - INFO - UserProfile : July 11, 2021
+Sun 02/06/2022 01:48:54 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:48:54 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:48:56 PM - INFO - UserProfile : June 6, 2021
+Sun 02/06/2022 01:48:56 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:48:56 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:48:58 PM - INFO - UserProfile : May 11, 2021
+Sun 02/06/2022 01:48:58 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:48:58 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:00 PM - INFO - UserProfile : April 18, 2021
+Sun 02/06/2022 01:49:00 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:00 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:02 PM - INFO - UserProfile : March 28, 2021
+Sun 02/06/2022 01:49:02 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:02 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:04 PM - INFO - UserProfile : February 12, 2021
+Sun 02/06/2022 01:49:04 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:04 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:06 PM - INFO - UserProfile : December 9, 2020
+Sun 02/06/2022 01:49:06 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:06 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:08 PM - INFO - UserProfile : November 17, 2020
+Sun 02/06/2022 01:49:08 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:08 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:10 PM - INFO - UserProfile : October 31, 2020
+Sun 02/06/2022 01:49:10 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:10 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:13 PM - INFO - UserProfile : September 18, 2020
+Sun 02/06/2022 01:49:13 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:13 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:15 PM - INFO - UserProfile : August 17, 2020
+Sun 02/06/2022 01:49:15 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:15 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:17 PM - INFO - UserProfile : July 30, 2020
+Sun 02/06/2022 01:49:17 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:17 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:19 PM - INFO - UserProfile : June 14, 2020
+Sun 02/06/2022 01:49:19 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:19 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:21 PM - INFO - UserProfile : May 8, 2020
+Sun 02/06/2022 01:49:21 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:21 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:23 PM - INFO - UserProfile : February 23, 2020
+Sun 02/06/2022 01:49:23 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:23 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:25 PM - INFO - UserProfile : November 12, 2019
+Sun 02/06/2022 01:49:25 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:25 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:27 PM - INFO - UserProfile : October 23, 2019
+Sun 02/06/2022 01:49:27 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:27 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:29 PM - INFO - UserProfile : October 1, 2019
+Sun 02/06/2022 01:49:29 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:29 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:31 PM - INFO - UserProfile : July 22, 2019
+Sun 02/06/2022 01:49:31 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:31 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:33 PM - INFO - UserProfile : June 29, 2019
+Sun 02/06/2022 01:49:33 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:33 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:35 PM - INFO - UserProfile : June 16, 2019
+Sun 02/06/2022 01:49:35 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:35 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:38 PM - INFO - UserProfile : February 6, 2019
+Sun 02/06/2022 01:49:38 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:38 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:40 PM - INFO - UserProfile : December 28, 2018
+Sun 02/06/2022 01:49:40 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:40 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:42 PM - INFO - UserProfile : December 14, 2018
+Sun 02/06/2022 01:49:42 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:42 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:44 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 01:49:44 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 01:49:44 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2018)
+Sun 02/06/2022 01:49:44 PM - INFO - UserProfile : We found the first post!
+Sun 02/06/2022 01:49:44 PM - INFO - UserProfile : JP Payano
+Sun 02/06/2022 01:49:44 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 01:49:44 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
+ the number of loops it took to get here was 25 
+ the index of the first post is 113 
+
+Sun 02/06/2022 01:49:44 PM - INFO - TestDeleteOldPosts : 114
