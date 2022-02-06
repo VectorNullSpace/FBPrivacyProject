@@ -1,5 +1,6 @@
 
 
+from email import utils
 import time
 from base.base_driver import BaseDriver
 from selenium.webdriver.common.by import  By
@@ -45,6 +46,7 @@ class UserProfile(BaseDriver):
 
     def go_through_posts(self):
         username = self.get_users_name()
+        dateOfInterestTempVar = "December 9, 2020"
         self.log.info(username)
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(5)
@@ -64,6 +66,13 @@ class UserProfile(BaseDriver):
                 poster = self.get_name_of_poster(post)
                 self.log.info(poster)
                 self.log.info("text match returns {}".format(Utils.does_text_match(username,poster)))
+                if Utils.validate(date):
+                    if Utils.is_before(dateOfInterestTempVar,date):
+                        self.log.info("the current post is before the date of interest ({})".format(dateOfInterestTempVar))
+                    else:
+                        self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterestTempVar))
+                
+
             
             posts = self.get_all_posts()
             if len(posts) == totalPosts:

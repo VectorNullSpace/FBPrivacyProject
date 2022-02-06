@@ -1,4 +1,5 @@
 import inspect
+from attr import validate
 import softest
 import logging
 from openpyxl import Workbook, load_workbook
@@ -102,3 +103,7 @@ class Utils(softest.TestCase):
         finally:
             return matching
 
+    def is_before(dateOfInterest,dateBeingChecked):
+        isBeforeDate = datetime.datetime.strptime(dateOfInterest, '%B %d, %Y')
+        checkedDate = datetime.datetime.strptime(dateBeingChecked, '%B %d, %Y')
+        return(isBeforeDate > checkedDate)
