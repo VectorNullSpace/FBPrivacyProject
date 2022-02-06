@@ -1,5 +1,6 @@
 
 
+from ast import While
 from email import utils
 import time
 from base.base_driver import BaseDriver
@@ -79,6 +80,53 @@ class UserProfile(BaseDriver):
                 match = True
             else:
                 totalPosts = len(posts)
+
+    def find_first_post_before_date(self):
+        dateOfInterestTempVar = "December 9, 2018"
+        self.log.info("searching for first post that is before the given date ({})".format(dateOfInterestTempVar))
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(2)
+        posts = self.get_all_posts()
+        totalPosts = len(posts)
+        match = False
+        numberOfLoops = 0
+        while match == False:
+            lastPost = posts[-1]
+            self.scroll_to_element(lastPost)
+            time.sleep(1)
+            date = self.get_date_from_post(lastPost)
+            self.log.info(date)
+            self.log.info("Does the date match the proper format? {}".format(Utils.validate(date)))
+            if Utils.validate(date):
+                if Utils.is_before(dateOfInterestTempVar,date):
+                    self.log.info("the current post is before the date of interest ({})".format(dateOfInterestTempVar))
+                    self.log.info("We found the first post!")
+                    totalPosts = len(posts)
+                    poster = self.get_name_of_poster(lastPost)
+                    self.log.info(poster)
+                    self.log.info(date)
+                    indexOfPost = totalPosts - 1
+                    self.log.info("we found the first post that is before the given date of {dateGiven} \n the number of loops it took to get here was {numberOfLoops} \n the index of the first post is {indexOfPost} \n".format(dateGiven = dateOfInterestTempVar, numberOfLoops = numberOfLoops,indexOfPost = indexOfPost -1))    
+                    match = True
+                else:
+                    self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterestTempVar))
+            
+            numberOfLoops = numberOfLoops + 1
+            posts = self.get_all_posts()
+            if len(posts) == totalPosts:
+                self.log.info("there were no posts that matched the criteria requested for deletion")
+                indexOfPost = -1 
+                match = True
+            else:
+                totalPosts = len(posts)
+
+        return indexOfPost
+
+
+        
+
+
+
             
             
 

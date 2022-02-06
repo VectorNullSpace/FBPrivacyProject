@@ -35,7 +35,9 @@ class TestDeleteOldPosts(softest.TestCase):
         fb_home = self.lp.loginToFB()
         time.sleep(2)
         fb_userProfile = fb_home.navigateToUserProfile()
-        fb_userProfile.go_through_posts()
+        # fb_userProfile.go_through_posts()
+        indexOfFirstPost = fb_userProfile.find_first_post_before_date()
+        self.log.info(indexOfFirstPost)
         assert 2+2 == 4
         
 

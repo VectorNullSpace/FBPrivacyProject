@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>JP&apos;s Automation Report</h1>
-    <p>Report generated on 06-Feb-2022 at 12:39:41 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 06-Feb-2022 at 13:49:49 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,7 +259,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.9.10</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 147.74 seconds. </p>
+    <p>1 tests ran in 80.15 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -275,8 +275,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">testcases/test_login.py::TestDeleteOldPosts::test_login_to_fb</td>
-          <td class="col-duration">1.77</td>
-          <td class="col-links"></td></tr>
+          <td class="col-duration">79.96</td>
+          <td class="col-links"><a class="url" href="http://www.facebook.com/" target="_blank">URL</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
@@ -290,4 +290,97 @@ Driver [C:\Users\Payan\.wdm\drivers\chromedriver\win32\97.0.4692.71\chromedriver
 INFO     WDM:logger.py:26 ====== WebDriver manager ======
 INFO     WDM:logger.py:26 Current google-chrome version is 97.0.4692
 INFO     WDM:logger.py:26 Get LATEST chromedriver version for 97.0.4692 google-chrome
-INFO     WDM:logger.py:26 Driver [C:\Users\Payan\.wdm\drivers\chromedriver\win32\97.0.4692.71\chromedriver.exe] found in cache<br/></div></td></tr></tbody></table></body></html>
+INFO     WDM:logger.py:26 Driver [C:\Users\Payan\.wdm\drivers\chromedriver\win32\97.0.4692.71\chromedriver.exe] found in cache<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     FBLandingPage:FB_landing_page.py:35 attempting to enter email
+INFO     FBLandingPage:FB_landing_page.py:40 Typed email into email field successfully
+INFO     FBLandingPage:FB_landing_page.py:46 attempting to enter password
+INFO     FBLandingPage:FB_landing_page.py:50 Typed password into password field successfully
+INFO     FBLandingPage:FB_landing_page.py:55 attempting to click login
+INFO     FBHomePage:FB_home_page.py:23 attempting to click user profile
+INFO     FBHomePage:FB_home_page.py:27 clicked user profile successfully
+INFO     UserProfile:FB_user_profile_page.py:86 searching for first post that is before the given date (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 September 2, 2021
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 July 11, 2021
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 June 6, 2021
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 May 11, 2021
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 April 18, 2021
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 March 28, 2021
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 February 12, 2021
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 December 9, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 November 17, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 October 31, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 September 18, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 August 17, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 July 30, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 June 14, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 May 8, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 February 23, 2020
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 November 12, 2019
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 October 23, 2019
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 October 1, 2019
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 July 22, 2019
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 June 29, 2019
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 June 16, 2019
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 February 6, 2019
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 December 28, 2018
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 December 14, 2018
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:112 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:98 November 30, 2018
+INFO     UserProfile:FB_user_profile_page.py:99 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:102 the current post is before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:103 We found the first post!
+INFO     UserProfile:FB_user_profile_page.py:106 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:107 November 30, 2018
+INFO     UserProfile:FB_user_profile_page.py:109 we found the first post that is before the given date of December 9, 2018 
+ the number of loops it took to get here was 25 
+ the index of the first post is 113 
+
+INFO     TestDeleteOldPosts:test_login.py:40 114<br/></div></td></tr></tbody></table></body></html>
