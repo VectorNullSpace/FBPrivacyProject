@@ -6,6 +6,7 @@ import time
 from base.base_driver import BaseDriver
 from selenium.webdriver.common.by import  By
 from utilities.utils import  Utils
+from selenium.common.exceptions import NoSuchElementException
 
 class UserProfile(BaseDriver):
     log = Utils.custom_logger()
@@ -17,7 +18,7 @@ class UserProfile(BaseDriver):
  
     POST_ELEMENTS = "//div[@data-pagelet='ProfileTimeline']//div[@class='du4w35lb k4urcfbm l9j0dhe7 sjgh65i0']"
     DATE_ELEMENT_CHILD = ".//div[@class='qzhwtbm6 knvmm38d'][2]//a[@href='#']"
-    MOVE_TO_TRASH_BUTTON = "(//div[@role='menuitem'])[9]"
+    MOVE_TO_TRASH_BUTTON = ".(//div[@role='menuitem'])[9]"
     FINALIZE_MOVE_TO_TRASH_BUTTON = "(//div[@aria-label='Move'])[1]"
     CANCEL_MOVE_TO_TRASH_BUTTON = "(//div[@aria-label='Cancel'])[2]"
     POSTER_NAME_CHILD = ".//strong"
@@ -44,6 +45,18 @@ class UserProfile(BaseDriver):
         else:
             return child.text
 
+    def get_move_to_trash_button(self,post):
+        return  self.get_child_elemenet(By.XPATH,post,self.MOVE_TO_TRASH_BUTTON)
+        
+    def click_move_to_trash_button(self,post):
+        self.log.info("attempting to move to trash button")
+        try:
+            self.get_move_to_trash_button(post).click()
+            self.log.info("clicked user profile successfully")
+        except NoSuchElementException:
+            self.log.warning("element did not exist")
+        finally:
+            time.sleep(4)
 
     def go_through_posts(self):
         username = self.get_users_name()
@@ -72,8 +85,6 @@ class UserProfile(BaseDriver):
                         self.log.info("the current post is before the date of interest ({})".format(dateOfInterestTempVar))
                     else:
                         self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterestTempVar))
-                
-
             
             posts = self.get_all_posts()
             if len(posts) == totalPosts:
@@ -106,7 +117,7 @@ class UserProfile(BaseDriver):
                     self.log.info(poster)
                     self.log.info(date)
                     indexOfPost = totalPosts - 1
-                    self.log.info("we found the first post that is before the given date of {dateGiven} \n the number of loops it took to get here was {numberOfLoops} \n the index of the first post is {indexOfPost} \n".format(dateGiven = dateOfInterestTempVar, numberOfLoops = numberOfLoops,indexOfPost = indexOfPost -1))    
+                    self.log.info("we found the first post that is before the given date of {dateGiven} \n the number of loops it took to get here was {numberOfLoops} \n the index of the first post is {indexOfPost} \n".format(dateGiven = dateOfInterestTempVar, numberOfLoops = numberOfLoops,indexOfPost = indexOfPost))    
                     match = True
                 else:
                     self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterestTempVar))
@@ -121,6 +132,7 @@ class UserProfile(BaseDriver):
                 totalPosts = len(posts)
 
         return indexOfPost
+
 
 
         
