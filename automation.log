@@ -1,470 +1,491 @@
-Mon 02/07/2022 03:22:29 PM - INFO - FBLandingPage : attempting to enter email
-Mon 02/07/2022 03:22:29 PM - INFO - FBLandingPage : Typed email into email field successfully
-Mon 02/07/2022 03:22:29 PM - INFO - FBLandingPage : attempting to enter password
-Mon 02/07/2022 03:22:30 PM - INFO - FBLandingPage : Typed password into password field successfully
-Mon 02/07/2022 03:22:30 PM - INFO - FBLandingPage : attempting to click login
-Mon 02/07/2022 03:22:32 PM - INFO - FBHomePage : attempting to click user profile
-Mon 02/07/2022 03:22:33 PM - INFO - FBHomePage : clicked user profile successfully
-Mon 02/07/2022 03:22:43 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
-Mon 02/07/2022 03:22:47 PM - INFO - UserProfile : September 2, 2021
-Mon 02/07/2022 03:22:47 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:47 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:48 PM - INFO - UserProfile : July 21, 2021
-Mon 02/07/2022 03:22:48 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:48 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:49 PM - INFO - UserProfile : June 24, 2021
-Mon 02/07/2022 03:22:49 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:49 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:50 PM - INFO - UserProfile : May 30, 2021
-Mon 02/07/2022 03:22:50 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:50 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:51 PM - INFO - UserProfile : May 11, 2021
-Mon 02/07/2022 03:22:51 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:51 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:52 PM - INFO - UserProfile : April 28, 2021
-Mon 02/07/2022 03:22:52 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:52 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:53 PM - INFO - UserProfile : April 4, 2021
-Mon 02/07/2022 03:22:53 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:53 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:54 PM - INFO - UserProfile : March 4, 2021
-Mon 02/07/2022 03:22:54 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:54 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:55 PM - INFO - UserProfile : December 25, 2020
-Mon 02/07/2022 03:22:55 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:55 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:56 PM - INFO - UserProfile : November 17, 2020
-Mon 02/07/2022 03:22:56 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:56 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:58 PM - INFO - UserProfile : October 31, 2020
-Mon 02/07/2022 03:22:58 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:58 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:22:59 PM - INFO - UserProfile : September 23, 2020
-Mon 02/07/2022 03:22:59 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:22:59 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:00 PM - INFO - UserProfile : August 17, 2020
-Mon 02/07/2022 03:23:00 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:00 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:01 PM - INFO - UserProfile : July 30, 2020
-Mon 02/07/2022 03:23:01 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:01 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:02 PM - INFO - UserProfile : June 21, 2020
-Mon 02/07/2022 03:23:02 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:02 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:03 PM - INFO - UserProfile : May 8, 2020
-Mon 02/07/2022 03:23:03 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:03 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:04 PM - INFO - UserProfile : February 23, 2020
-Mon 02/07/2022 03:23:04 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:04 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:05 PM - INFO - UserProfile : November 19, 2019
-Mon 02/07/2022 03:23:05 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:05 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:06 PM - INFO - UserProfile : November 3, 2019
-Mon 02/07/2022 03:23:06 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:06 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:07 PM - INFO - UserProfile : October 23, 2019
-Mon 02/07/2022 03:23:07 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:07 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:09 PM - INFO - UserProfile : October 1, 2019
-Mon 02/07/2022 03:23:09 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:09 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:10 PM - INFO - UserProfile : August 4, 2019
-Mon 02/07/2022 03:23:10 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:10 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:11 PM - INFO - UserProfile : July 10, 2019
-Mon 02/07/2022 03:23:11 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:11 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:12 PM - INFO - UserProfile : June 29, 2019
-Mon 02/07/2022 03:23:12 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:12 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:13 PM - INFO - UserProfile : June 16, 2019
-Mon 02/07/2022 03:23:13 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:13 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:14 PM - INFO - UserProfile : March 27, 2019
-Mon 02/07/2022 03:23:14 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:14 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:15 PM - INFO - UserProfile : February 5, 2019
-Mon 02/07/2022 03:23:15 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:15 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:17 PM - INFO - UserProfile : January 12, 2019
-Mon 02/07/2022 03:23:17 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:17 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:18 PM - INFO - UserProfile : December 22, 2018
-Mon 02/07/2022 03:23:18 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:18 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:19 PM - INFO - UserProfile : December 9, 2018
-Mon 02/07/2022 03:23:19 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:19 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : November 30, 2018
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : We found the first post!
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : JP Payano
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : November 30, 2018
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
- the number of loops it took to get here was 30 
+Mon 02/07/2022 06:12:55 PM - INFO - FBLandingPage : attempting to enter email
+Mon 02/07/2022 06:12:55 PM - INFO - FBLandingPage : Typed email into email field successfully
+Mon 02/07/2022 06:12:55 PM - INFO - FBLandingPage : attempting to enter password
+Mon 02/07/2022 06:12:55 PM - INFO - FBLandingPage : Typed password into password field successfully
+Mon 02/07/2022 06:12:55 PM - INFO - FBLandingPage : attempting to click login
+Mon 02/07/2022 06:12:57 PM - INFO - FBHomePage : attempting to click user profile
+Mon 02/07/2022 06:13:00 PM - INFO - FBHomePage : clicked user profile successfully
+Mon 02/07/2022 06:13:10 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
+Mon 02/07/2022 06:13:52 PM - INFO - UserProfile : waiting in case of sync issue
+Mon 02/07/2022 06:13:54 PM - INFO - UserProfile : the current post is before the date of interest (November 30, 2018)
+Mon 02/07/2022 06:13:54 PM - INFO - UserProfile : We found the first post!
+Mon 02/07/2022 06:13:54 PM - INFO - UserProfile : JP Payano
+Mon 02/07/2022 06:13:54 PM - INFO - UserProfile : November 30, 2018
+Mon 02/07/2022 06:13:54 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
+ the number of loops it took to get here was 32 
  the index of the first post is 114 
 
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:23:20 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:23:21 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:23:21 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:23:21 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:23:21 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:23:22 PM - INFO - UserProfile : November 24, 2018
-Mon 02/07/2022 03:23:22 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:22 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:23 PM - INFO - UserProfile : November 25, 2018
-Mon 02/07/2022 03:23:23 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:23 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:24 PM - INFO - UserProfile : November 25, 2018
-Mon 02/07/2022 03:23:24 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:24 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:25 PM - INFO - UserProfile : November 30, 2018
-Mon 02/07/2022 03:23:25 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:25 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:26 PM - INFO - UserProfile : November 30, 2018
-Mon 02/07/2022 03:23:26 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:26 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:27 PM - INFO - UserProfile : December 1, 2018
-Mon 02/07/2022 03:23:27 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:27 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:28 PM - INFO - UserProfile : December 3, 2018
-Mon 02/07/2022 03:23:28 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:28 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : December 9, 2018
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : Does the date match the proper format? True
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : this is the latest post before the date of interest (December 9, 2018)
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : We found the first post(to ignore)!
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : JP Payano
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : December 9, 2018
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : this is the latest post before the date of interest (December 9, 2018)
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : We found the first post(to ignore)!
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : JP Payano
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : December 9, 2018
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
   the index of the first post is 110 
 
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : this is post number 1
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : this is post number 2
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:23:30 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : this is post number 3
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:23:31 PM - INFO - UserProfile : this is post number 4
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:23:32 PM - INFO - UserProfile : this is post number 5
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : this is post number 6
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:23:33 PM - INFO - UserProfile : this is post number 7
-Mon 02/07/2022 03:23:34 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:23:34 PM - INFO - UserProfile : this is post number 8
-Mon 02/07/2022 03:23:34 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:23:34 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:23:34 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:23:34 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:23:44 PM - WARNING - UserProfile : element did not exist
-Mon 02/07/2022 03:23:44 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:23:54 PM - WARNING - UserProfile : element did not exist
-Mon 02/07/2022 03:23:54 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:23:54 PM - INFO - UserProfile : this is post number 9
-Mon 02/07/2022 03:23:54 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:23:54 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:23:54 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:23:54 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:23:55 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:23:55 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:23:55 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:23:55 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:23:55 PM - INFO - UserProfile : this is post number 10
-Mon 02/07/2022 03:24:05 PM - WARNING - UserProfile : childe element did not exist
-Mon 02/07/2022 03:24:05 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:05 PM - INFO - UserProfile : this is post number 11
-Mon 02/07/2022 03:24:05 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:05 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:05 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:05 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : the number of total posts in the DOM is 121
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : The number of posts gone through last loop are 11
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : The number of posts deleted last time were 7
-Mon 02/07/2022 03:24:06 PM - INFO - UserProfile : this is post number 1
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : this is post number 2
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:07 PM - INFO - UserProfile : this is post number 3
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : this is post number 4
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:08 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : this is post number 5
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:09 PM - INFO - UserProfile : this is post number 6
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : this is post number 7
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : this is post number 8
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:10 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:20 PM - WARNING - UserProfile : element did not exist
-Mon 02/07/2022 03:24:20 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:30 PM - WARNING - UserProfile : element did not exist
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : this is post number 9
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:30 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:31 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:31 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:31 PM - INFO - UserProfile : this is post number 10
-Mon 02/07/2022 03:24:41 PM - WARNING - UserProfile : childe element did not exist
-Mon 02/07/2022 03:24:41 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:41 PM - INFO - UserProfile : this is post number 11
-Mon 02/07/2022 03:24:41 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:41 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : this is post number 12
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:42 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:44 PM - WARNING - UserProfile : element click intercepted attempting to move a little and retry
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : this is post number 13
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:44 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : this is post number 14
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:45 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : the number of total posts in the DOM is 124
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : The number of posts gone through last loop are 14
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : The number of posts deleted last time were 10
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : this is post number 1
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:46 PM - INFO - UserProfile : this is post number 2
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : this is post number 3
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:47 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : this is post number 4
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : this is post number 5
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:48 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : this is post number 6
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : this is post number 7
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : this is post number 8
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:24:49 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:00 PM - WARNING - UserProfile : element did not exist
-Mon 02/07/2022 03:25:00 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:10 PM - WARNING - UserProfile : element did not exist
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : this is post number 9
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:10 PM - INFO - UserProfile : this is post number 10
-Mon 02/07/2022 03:25:20 PM - WARNING - UserProfile : childe element did not exist
-Mon 02/07/2022 03:25:20 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:25:20 PM - INFO - UserProfile : this is post number 11
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : this is post number 12
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:21 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:23 PM - WARNING - UserProfile : element click intercepted attempting to move a little and retry
-Mon 02/07/2022 03:25:23 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:23 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:23 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:23 PM - INFO - UserProfile : this is post number 13
-Mon 02/07/2022 03:25:23 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:23 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : this is post number 14
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:24 PM - INFO - UserProfile : this is post number 15
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:25 PM - INFO - UserProfile : this is post number 16
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : this is post number 17
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:26 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : this is post number 18
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : the current post does NOT meet criteria
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : this is post number 19
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:27 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : this is post number 20
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : current post meets the criteria
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : attempting to click the options for this post button
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : clicked on options button successfully
-Mon 02/07/2022 03:25:29 PM - INFO - UserProfile : attempting to click move to trash button
-Mon 02/07/2022 03:25:30 PM - INFO - UserProfile : clicked move to trash button successfully
-Mon 02/07/2022 03:25:30 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
-Mon 02/07/2022 03:25:30 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
-Mon 02/07/2022 03:25:30 PM - INFO - UserProfile : post has been fake deleted
-Mon 02/07/2022 03:25:30 PM - INFO - UserProfile : the number of posts looked at are 45 and the number of deleted among them are 32
-Mon 02/07/2022 03:25:30 PM - INFO - UserProfile : the number of loops around were 2
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : this is post number 1
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : date of post: December 9, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : this is post number 2
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : date of post: December 3, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:03 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:04 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : this is post number 3
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : date of post: December 1, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:06 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:07 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : this is post number 4
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:09 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:10 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : this is post number 5
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:12 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:13 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : this is post number 6
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : length of name text 11 and length of full text 45
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : date of post: November 25, 2018 name of poster: Daniel Wade fullText of name: Daniel Wade is with Jenny Tran and
+3 others
+.
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : this is post number 7
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : length of name text 16 and length of full text 53
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : date of post: November 25, 2018 name of poster: Keneley Bautista fullText of name: Keneley Bautista is with Aurora Wagner and
+4 others
+.
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:15 PM - INFO - UserProfile : this is post number 8
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : length of name text 9 and length of full text 38
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : this is post number 9
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:16 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:18 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:18 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:18 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:18 PM - INFO - UserProfile : this is post number 10
+Mon 02/07/2022 06:14:29 PM - WARNING - UserProfile : childe element did not exist
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : length of name text 13 and length of full text 51
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : date of post: no child element found name of poster: Aurora Wagner fullText of name: Aurora Wagner is with Lamont Houston and
+9 others
+.
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : this is post number 11
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : date of post: November 17, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:29 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:31 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : the number of total posts in the DOM is 121
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : The number of posts gone through last loop are 11
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : The number of posts deleted last time were 6
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : this is post number 1
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : date of post: December 9, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : this is post number 2
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : date of post: December 3, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:33 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:34 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : this is post number 3
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : date of post: December 1, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:36 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : this is post number 4
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:38 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:39 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:39 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:39 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:39 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : this is post number 5
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:41 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:43 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:43 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:43 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:43 PM - INFO - UserProfile : this is post number 6
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : length of name text 11 and length of full text 45
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : date of post: November 25, 2018 name of poster: Daniel Wade fullText of name: Daniel Wade is with Jenny Tran and
+3 others
+.
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : this is post number 7
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : length of name text 16 and length of full text 53
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : date of post: November 25, 2018 name of poster: Keneley Bautista fullText of name: Keneley Bautista is with Aurora Wagner and
+4 others
+.
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : this is post number 8
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : length of name text 9 and length of full text 38
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : this is post number 9
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:44 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:45 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:47 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:14:47 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:14:47 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:14:47 PM - INFO - UserProfile : this is post number 10
+Mon 02/07/2022 06:14:57 PM - WARNING - UserProfile : childe element did not exist
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : length of name text 13 and length of full text 51
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : date of post: no child element found name of poster: Aurora Wagner fullText of name: Aurora Wagner is with Lamont Houston and
+9 others
+.
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : this is post number 11
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : date of post: November 17, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:14:57 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:14:59 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : this is post number 12
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : date of post: November 15, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:00 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:01 PM - WARNING - UserProfile : element click intercepted attempting to move a little and retry
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : this is post number 13
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : date of post: November 14, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:04 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:06 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:06 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:06 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:06 PM - INFO - UserProfile : this is post number 14
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : date of post: November 12, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:07 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:09 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : this is post number 15
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:10 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:11 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : this is post number 16
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : length of name text 9 and length of full text 29
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano updated his status.
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : this is post number 17
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : length of name text 9 and length of full text 43
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : date of post: November 5, 2018 name of poster: JP Payano fullText of name: JP Payano shared an episode of Inside Look.
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : the number of total posts in the DOM is 127
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : The number of posts gone through last loop are 17
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : The number of posts deleted last time were 10
+Mon 02/07/2022 06:15:13 PM - INFO - UserProfile : this is post number 1
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : date of post: December 9, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : this is post number 2
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : date of post: December 3, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:14 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : this is post number 3
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : date of post: December 1, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:16 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:17 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:17 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:17 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:17 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : this is post number 4
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:19 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:21 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : this is post number 5
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:22 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:24 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:24 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:24 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:24 PM - INFO - UserProfile : this is post number 6
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : length of name text 11 and length of full text 45
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : date of post: November 25, 2018 name of poster: Daniel Wade fullText of name: Daniel Wade is with Jenny Tran and
+3 others
+.
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : this is post number 7
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : length of name text 16 and length of full text 53
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : date of post: November 25, 2018 name of poster: Keneley Bautista fullText of name: Keneley Bautista is with Aurora Wagner and
+4 others
+.
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : this is post number 8
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : length of name text 9 and length of full text 38
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : this is post number 9
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:25 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:27 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:27 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:27 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:27 PM - INFO - UserProfile : this is post number 10
+Mon 02/07/2022 06:15:38 PM - WARNING - UserProfile : childe element did not exist
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : length of name text 13 and length of full text 51
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : date of post: no child element found name of poster: Aurora Wagner fullText of name: Aurora Wagner is with Lamont Houston and
+9 others
+.
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : this is post number 11
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : date of post: November 17, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:38 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:40 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:40 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:40 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:40 PM - INFO - UserProfile : this is post number 12
+Mon 02/07/2022 06:15:41 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:41 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:41 PM - INFO - UserProfile : date of post: November 15, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:41 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:41 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:41 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:41 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:42 PM - WARNING - UserProfile : element click intercepted attempting to move a little and retry
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : this is post number 13
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : date of post: November 14, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:44 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:45 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : this is post number 14
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : date of post: November 12, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:47 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:49 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : this is post number 15
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:50 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:52 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:52 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:52 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:52 PM - INFO - UserProfile : this is post number 16
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : length of name text 9 and length of full text 29
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano updated his status.
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : this is post number 17
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : length of name text 9 and length of full text 43
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : date of post: November 5, 2018 name of poster: JP Payano fullText of name: JP Payano shared an episode of Inside Look.
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : this is post number 18
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : length of name text 15 and length of full text 53
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : date of post: November 1, 2018 name of poster: Armando Delgado fullText of name: Armando Delgado is with Andre Barbosa and
+10 others
+.
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : the current post does NOT meet criteria
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : this is post number 19
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : date of post: October 30, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:53 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:54 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:54 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:54 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:55 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : this is post number 20
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : the criteria is as follows username: JP Payano date:December 9, 2018
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : length of name text 9 and length of full text 9
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : date of post: October 25, 2018 name of poster: JP Payano fullText of name: JP Payano
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : current post meets the criteria
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : attempting to click the options for this post button
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : clicked on options button successfully
+Mon 02/07/2022 06:15:57 PM - INFO - UserProfile : attempting to click move to trash button
+Mon 02/07/2022 06:15:58 PM - INFO - UserProfile : clicked move to trash button successfully
+Mon 02/07/2022 06:16:00 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Mon 02/07/2022 06:16:00 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Mon 02/07/2022 06:16:00 PM - INFO - UserProfile : post has been fake deleted
+Mon 02/07/2022 06:16:00 PM - INFO - UserProfile : the number of posts looked at are 48 and the number of deleted among them are 28
+Mon 02/07/2022 06:16:00 PM - INFO - UserProfile : the number of loops around were 2
