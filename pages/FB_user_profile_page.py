@@ -6,7 +6,7 @@ import time
 from base.base_driver import BaseDriver
 from selenium.webdriver.common.by import  By
 from utilities.utils import  Utils
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 
 class UserProfile(BaseDriver):
     log = Utils.custom_logger()
@@ -33,21 +33,21 @@ class UserProfile(BaseDriver):
         return self.wait_for_presence_of_all_elements(By.XPATH,self.POST_ELEMENTS)
 
     def get_date_from_post(self,post):
-        child =  self.get_child_elemenet(By.XPATH,post,self.DATE_ELEMENT_CHILD)
+        child =  self.get_child_element(By.XPATH,post,self.DATE_ELEMENT_CHILD)
         if type(child) == str:
             return child
         else:
             return child.get_attribute("aria-label")
 
     def get_name_of_poster(self,post):
-        child =  self.get_child_elemenet(By.XPATH,post,self.POSTER_NAME_CHILD)
+        child =  self.get_child_element(By.XPATH,post,self.POSTER_NAME_CHILD)
         if type(child) == str:
             return child
         else:
             return child.text
 
     def get_options_for_this_post(self,post):
-        return self.get_child_elemenet(By.XPATH,post,self.OPTIONS_FOR_THIS_POST)
+        return self.get_child_element(By.XPATH,post,self.OPTIONS_FOR_THIS_POST)
     
     def click_options_for_this_post(self,post):
         options = self.get_options_for_this_post(post)
@@ -68,6 +68,11 @@ class UserProfile(BaseDriver):
             self.log.info("clicked move to trash button successfully")
         except NoSuchElementException:
             self.log.warning("element did not exist")
+        except ElementClickInterceptedException:
+            self.log.warning("element click intercepted attempting to move a little and retry")
+            script = "window.scrollBy(0,400);"
+            self.driver.execute_script(script)
+            self.get_move_to_trash_button().click()
 
     def get_finalize_move_to_trash_button(self):
         return self.driver.find_element(By.XPATH,self.FINALIZE_MOVE_TO_TRASH_BUTTON)
@@ -125,9 +130,8 @@ class UserProfile(BaseDriver):
             else:
                 totalPosts = len(posts)
 
-    def find_first_post_before_date(self):
-        dateOfInterestTempVar = "December 9, 2018"
-        self.log.info("searching for first post that is before the given date ({})".format(dateOfInterestTempVar))
+    def find_first_post_before_date(self,dateOfInterest):
+        self.log.info("searching for first post that is before the given date ({})".format(dateOfInterest))
         self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(2)
         posts = self.get_all_posts()
@@ -142,56 +146,135 @@ class UserProfile(BaseDriver):
             self.log.info(date)
             self.log.info("Does the date match the proper format? {}".format(Utils.validate(date)))
             if Utils.validate(date):
-                if Utils.is_before(dateOfInterestTempVar,date):
-                    self.log.info("the current post is before the date of interest ({})".format(dateOfInterestTempVar))
+                if Utils.is_before(dateOfInterest,date):
+                    self.log.info("the current post is before the date of interest ({})".format(dateOfInterest))
                     self.log.info("We found the first post!")
                     totalPosts = len(posts)
                     poster = self.get_name_of_poster(lastPost)
                     self.log.info(poster)
                     self.log.info(date)
                     indexOfPost = totalPosts - 1
-                    self.log.info("we found the first post that is before the given date of {dateGiven} \n the number of loops it took to get here was {numberOfLoops} \n the index of the first post is {indexOfPost} \n".format(dateGiven = dateOfInterestTempVar, numberOfLoops = numberOfLoops,indexOfPost = indexOfPost))    
+                    self.log.info("we found the first post that is before the given date of {dateGiven} \n the number of loops it took to get here was {numberOfLoops} \n the index of the first post is {indexOfPost} \n".format(dateGiven = dateOfInterest, numberOfLoops = numberOfLoops,indexOfPost = indexOfPost))    
                     self.fake_delete_post(lastPost)
+                    indexOfPost = self.go_through_posts_backwards(dateOfInterest)
                     match = True
+                    break
                 else:
-                    self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterestTempVar))
+                    self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterest))
             
             numberOfLoops = numberOfLoops + 1
             posts = self.get_all_posts()
             if len(posts) == totalPosts:
-                self.log.info("there were no posts that matched the criteria requested for deletion")
-                indexOfPost = -1 
-                match = True
+                #give it a second to load and check again. occasionally there is a sync issue
+                time.sleep(4)
+                self.log.info("waiting in case of sync issue")
+                posts = self.get_all_posts()
+                if len(posts) == totalPosts:
+                    self.log.info("there were no posts that matched the criteria requested for deletion")
+                    indexOfPost = -1 
+                    match = True
+                else:
+                    totalPosts = len(posts)
             else:
                 totalPosts = len(posts)
 
         return indexOfPost
 
     def delete_post(self,post):
-        height = post.size['height']
         self.scroll_to_element(post)
-        script = "window.scrollBy(0,-{});".format(height/2)
-        self.driver.execute_script(script)
         self.click_options_for_this_post(post)
-        time.sleep(4)
         self.click_move_to_trash_button()
-        time.sleep(4)
         self.click_finalize_move_to_trash_button()
+        self.log.info("post hase been deleted")
 
     def fake_delete_post(self,post):
-        height = post.size['height']
         self.scroll_to_element(post)
-        script = "window.scrollBy(0,-{});".format(height/2)
-        self.driver.execute_script(script)
         self.click_options_for_this_post(post)
-        time.sleep(4)
         self.click_move_to_trash_button()
-        time.sleep(4)
         self.click_cancel_move_to_trash_button()
+        self.log.info("post has been fake deleted")
 
+    def go_through_posts_backwards(self,dateOfInterest):
+        posts = self.get_all_posts()
+        totalPosts = len(posts)
+        match = False
+        numberOfPostsGoneThrough = 0
+        while match == False:
+            for post in reversed(posts):
+                numberOfPostsGoneThrough = numberOfPostsGoneThrough + 1
+                self.scroll_to_element(post)
+                time.sleep(1)
+                date = self.get_date_from_post(post)
+                self.log.info(date)
+                self.log.info("Does the date match the proper format? {}".format(Utils.validate(date)))
+                if Utils.validate(date):
+                    if not Utils.is_before(dateOfInterest,date):
+                        self.log.info("this is the latest post before the date of interest ({})".format(dateOfInterest))
+                        self.log.info("We found the first post(to ignore)!")
+                        totalPosts = len(posts)
+                        poster = self.get_name_of_poster(post)
+                        self.log.info(poster)
+                        self.log.info(date)
+                        indexOfPost = totalPosts - numberOfPostsGoneThrough
+                        self.log.info("we found the first post that is before the given date of {dateGiven} \n  the index of the first post is {indexOfPost} \n".format(dateGiven = dateOfInterest,indexOfPost = indexOfPost))
+                        match = True
+                        break
+                    else:
+                        self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterest))
 
+        return indexOfPost
 
+    def postMeetsCriteria(self,post,dateOfInterest,usersName):
+        date = self.get_date_from_post(post)
+        poster = self.get_name_of_poster(post)
+        meetsCriteria = False
+        if Utils.validate(date):
+            meetsCriteria = (Utils.is_before(dateOfInterest,date) and Utils.does_text_match(poster,usersName))
         
+        if meetsCriteria ==True:
+            self.log.info("current post meets the criteria")
+        else:
+            self.log.info("the current post does NOT meet criteria")
+            
+        return meetsCriteria
+        
+    def go_through_posts_and_delete(self,dateOfInterest,usersName,startingPostIndex):
+        posts = self.get_all_posts()
+        totalPosts = len(posts)
+        match = False
+        numberOfPostsLookedAt = 0
+        numberOfPostsDeleted = 0
+        numberOfLoops = 0
+        totalPostslookedat = 0
+        totalPostsDeleted = 0
+        while match == False:
+            for i in range(startingPostIndex,totalPosts + 1):
+                totalPostslookedat = totalPostslookedat + 1
+                numberOfPostsLookedAt = numberOfPostsLookedAt + 1
+                post = posts[i]
+                self.log.info("this is post number {}".format(numberOfPostsLookedAt))
+                self.scroll_to_element(post)
+                if self.postMeetsCriteria(post,dateOfInterest,usersName):
+                    numberOfPostsDeleted = numberOfPostsDeleted + 1
+                    totalPostsDeleted = totalPostsDeleted + 1
+                    self.fake_delete_post(post)
+
+            if totalPostslookedat > 30:
+                self.log.info("the number of posts looked at are {numberOfPosts} and the number of deleted among them are {numberOfPostsDeleted}".format(numberOfPosts = totalPostslookedat,numberOfPostsDeleted=totalPostsDeleted))
+                self.log.info("the number of loops around were {}".format(numberOfLoops))
+                match = True
+                break
+            else:
+                self.log.info("the number of total posts in the DOM is {}".format(totalPosts))
+                self.log.info("The number of posts gone through last loop are {}".format(numberOfPostsLookedAt))
+                self.log.info("The number of posts deleted last time were {}".format(numberOfPostsDeleted))
+                numberOfPostsLookedAt = 0
+                numberOfPostsDeleted = 0
+                posts = self.get_all_posts()
+                # startingPostIndex = startingPostIndex + numberOfPostsLookedAt - numberOfPostsDeleted 
+                totalPosts = len(posts)
+                numberOfLoops = numberOfLoops + 1
+
 
 
 

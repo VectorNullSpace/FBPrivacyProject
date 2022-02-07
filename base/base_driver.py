@@ -37,7 +37,7 @@ class BaseDriver:
         # allstops = self.driver.find_elements(By.XPATH,"//span[contains(text(),'Non Stop') or contains(text(), '1 Stop') or contains(text(), '2 Stop')]")
         return list_of_elements
 
-    def get_child_elemenet(self,locator_type,parent,child_locator):
+    def get_child_element(self,locator_type,parent,child_locator):
         try:
             return parent.find_element(locator_type,child_locator)
         except NoSuchElementException:
@@ -47,13 +47,13 @@ class BaseDriver:
     def scroll_to_element(self,element):
         try:
             self.driver.execute_script("arguments[0].scrollIntoView();", element)
-            time.sleep(1)
+            height = element.size['height']
+            script = "window.scrollBy(0,-{});".format(height/2)
+            self.driver.execute_script(script)
+
         except StaleElementReferenceException:
             self.driver.execute_script("window.scrollBy(0 , 2000 );")
             self.log.warning("stale reference")
-            time.sleep(1)
-            # self.driver.execute_script("arguments[0].scrollIntoView();", element)
-
 
 
     def zoom_out(self):

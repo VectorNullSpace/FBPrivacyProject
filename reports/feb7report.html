@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>JP&apos;s Automation Report</h1>
+    <p>Report generated on 07-Feb-2022 at 15:25:35 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "6.2.5"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.19042-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"Faker": "11.3.0", "html": "3.1.1", "metadata": "1.11.0"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.9.10</td></tr></table>
+    <h2>Summary</h2>
+    <p>1 tests ran in 187.39 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">testcases/test_login.py::TestDeleteOldPosts::test_login_to_fb</td>
+          <td class="col-duration">187.19</td>
+          <td class="col-links"><a class="url" href="http://www.facebook.com/" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 97.0.4692
+Get LATEST chromedriver version for 97.0.4692 google-chrome
+Driver [C:\Users\Payan\.wdm\drivers\chromedriver\win32\97.0.4692.71\chromedriver.exe] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>INFO     WDM:logger.py:26 
+
+INFO     WDM:logger.py:26 ====== WebDriver manager ======
+INFO     WDM:logger.py:26 Current google-chrome version is 97.0.4692
+INFO     WDM:logger.py:26 Get LATEST chromedriver version for 97.0.4692 google-chrome
+INFO     WDM:logger.py:26 Driver [C:\Users\Payan\.wdm\drivers\chromedriver\win32\97.0.4692.71\chromedriver.exe] found in cache<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     FBLandingPage:FB_landing_page.py:35 attempting to enter email
+INFO     FBLandingPage:FB_landing_page.py:40 Typed email into email field successfully
+INFO     FBLandingPage:FB_landing_page.py:46 attempting to enter password
+INFO     FBLandingPage:FB_landing_page.py:50 Typed password into password field successfully
+INFO     FBLandingPage:FB_landing_page.py:55 attempting to click login
+INFO     FBHomePage:FB_home_page.py:23 attempting to click user profile
+INFO     FBHomePage:FB_home_page.py:27 clicked user profile successfully
+INFO     UserProfile:FB_user_profile_page.py:134 searching for first post that is before the given date (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 September 2, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 July 21, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 June 24, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 May 30, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 May 11, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 April 28, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 April 4, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 March 4, 2021
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 December 25, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 November 17, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 October 31, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 September 23, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 August 17, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 July 30, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 June 21, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 May 8, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 February 23, 2020
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 November 19, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 November 3, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 October 23, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 October 1, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 August 4, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 July 10, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 June 29, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 June 16, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 March 27, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 February 5, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 January 12, 2019
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 December 22, 2018
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 December 9, 2018
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:163 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:146 November 30, 2018
+INFO     UserProfile:FB_user_profile_page.py:147 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:150 the current post is before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:151 We found the first post!
+INFO     UserProfile:FB_user_profile_page.py:154 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:155 November 30, 2018
+INFO     UserProfile:FB_user_profile_page.py:157 we found the first post that is before the given date of December 9, 2018 
+ the number of loops it took to get here was 30 
+ the index of the first post is 114 
+
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:208 November 24, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:223 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:208 November 25, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:223 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:208 November 25, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:223 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:208 November 30, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:223 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:208 November 30, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:223 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:208 December 1, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:223 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:208 December 3, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:223 the current post is NOT before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:208 December 9, 2018
+INFO     UserProfile:FB_user_profile_page.py:209 Does the date match the proper format? True
+INFO     UserProfile:FB_user_profile_page.py:212 this is the latest post before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:213 We found the first post(to ignore)!
+INFO     UserProfile:FB_user_profile_page.py:216 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:217 December 9, 2018
+INFO     UserProfile:FB_user_profile_page.py:219 we found the first post that is before the given date of December 9, 2018 
+  the index of the first post is 110 
+
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:70 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:97 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 10
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 11
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:268 the number of total posts in the DOM is 121
+INFO     UserProfile:FB_user_profile_page.py:269 The number of posts gone through last loop are 11
+INFO     UserProfile:FB_user_profile_page.py:270 The number of posts deleted last time were 7
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:70 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:97 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 10
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 11
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 12
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:72 element click intercepted attempting to move a little and retry
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 13
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 14
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:268 the number of total posts in the DOM is 124
+INFO     UserProfile:FB_user_profile_page.py:269 The number of posts gone through last loop are 14
+INFO     UserProfile:FB_user_profile_page.py:270 The number of posts deleted last time were 10
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:70 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:97 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 10
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 11
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 12
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:72 element click intercepted attempting to move a little and retry
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 13
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 14
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 15
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 16
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 17
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 18
+INFO     UserProfile:FB_user_profile_page.py:237 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 19
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:255 this is post number 20
+INFO     UserProfile:FB_user_profile_page.py:235 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:54 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:59 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:65 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:92 attempting to click on the cancel move to trash button
+INFO     UserProfile:FB_user_profile_page.py:95 clicked on the cancel move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:195 post has been fake deleted
+INFO     UserProfile:FB_user_profile_page.py:263 the number of posts looked at are 45 and the number of deleted among them are 32
+INFO     UserProfile:FB_user_profile_page.py:264 the number of loops around were 2<br/></div></td></tr></tbody></table></body></html>
