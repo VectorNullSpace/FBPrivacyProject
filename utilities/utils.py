@@ -21,7 +21,7 @@ class Utils(softest.TestCase):
                 print("test failed")
         self.assert_all()
 
-    def custom_logger( loglevel = logging.DEBUG):
+    def custom_logger( loglevel = logging.INFO):
 
         logger_name = inspect.stack()[1][3]
         
@@ -86,8 +86,13 @@ class Utils(softest.TestCase):
             print("test faild")
 
     def does_text_match(firstitem,seconditem):
-
         if firstitem == seconditem:
+            return True
+        else:
+            return False
+
+    def does_text_length_match(firstitem,seconditem):
+        if len(firstitem) == len(seconditem):
             return True
         else:
             return False
