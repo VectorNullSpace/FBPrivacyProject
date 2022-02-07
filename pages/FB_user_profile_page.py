@@ -18,11 +18,12 @@ class UserProfile(BaseDriver):
  
     POST_ELEMENTS = "//div[@data-pagelet='ProfileTimeline']//div[@class='du4w35lb k4urcfbm l9j0dhe7 sjgh65i0']"
     DATE_ELEMENT_CHILD = ".//div[@class='qzhwtbm6 knvmm38d'][2]//a[@href='#']"
-    MOVE_TO_TRASH_BUTTON = ".(//div[@role='menuitem'])[9]"
-    FINALIZE_MOVE_TO_TRASH_BUTTON = "(//div[@aria-label='Move'])[1]"
+    MOVE_TO_TRASH_BUTTON = "//span[normalize-space()='Move to trash']"
+    FINALIZE_MOVE_TO_TRASH_BUTTON = "//div[@aria-label='Move'][1]"
     CANCEL_MOVE_TO_TRASH_BUTTON = "(//div[@aria-label='Cancel'])[2]"
     POSTER_NAME_CHILD = ".//strong"
     USERS_NAME = "//body//div//h1[1]"
+    OPTIONS_FOR_THIS_POST = ".//div[@aria-label='Actions for this post'][1]"
 
     def get_users_name(self):
         # return self.driver.find_element(By.XPATH,self.USERS_NAME).get_attribute("textContent")
@@ -45,19 +46,51 @@ class UserProfile(BaseDriver):
         else:
             return child.text
 
-    def get_move_to_trash_button(self,post):
-        return  self.get_child_elemenet(By.XPATH,post,self.MOVE_TO_TRASH_BUTTON)
+    def get_options_for_this_post(self,post):
+        return self.get_child_elemenet(By.XPATH,post,self.OPTIONS_FOR_THIS_POST)
+    
+    def click_options_for_this_post(self,post):
+        options = self.get_options_for_this_post(post)
+        self.log.info("attempting to click the options for this post button")
+        if type(options) == str:
+            return options
+        else:
+            options.click()
+            self.log.info("clicked on options button successfully")
+
+    def get_move_to_trash_button(self):
+        return self.driver.find_element(By.XPATH,self.MOVE_TO_TRASH_BUTTON)
         
-    def click_move_to_trash_button(self,post):
-        self.log.info("attempting to move to trash button")
+    def click_move_to_trash_button(self):
+        self.log.info("attempting to click move to trash button")
         try:
-            self.get_move_to_trash_button(post).click()
-            self.log.info("clicked user profile successfully")
+            self.get_move_to_trash_button().click()
+            self.log.info("clicked move to trash button successfully")
         except NoSuchElementException:
             self.log.warning("element did not exist")
-        finally:
-            time.sleep(4)
 
+    def get_finalize_move_to_trash_button(self):
+        return self.driver.find_element(By.XPATH,self.FINALIZE_MOVE_TO_TRASH_BUTTON)
+
+    def get_cancel_move_to_trash_button(self):
+        return self.driver.find_element(By.XPATH,self.CANCEL_MOVE_TO_TRASH_BUTTON)
+    
+    def click_finalize_move_to_trash_button(self):
+        self.log.info("attempting to click on the final move to trash button")
+        try:
+            self.get_finalize_move_to_trash_button().click()
+            self.log.info("clicked on the final move to trash button successfully")
+        except NoSuchElementException:
+            self.log.warning("element did not exist")
+
+    def click_cancel_move_to_trash_button(self):
+        self.log.info("attempting to click on the cancel move to trash button")
+        try:
+            self.get_cancel_move_to_trash_button().click()
+            self.log.info("clicked on the cancel move to trash button successfully")
+        except NoSuchElementException:
+            self.log.warning("element did not exist")
+    
     def go_through_posts(self):
         username = self.get_users_name()
         dateOfInterestTempVar = "December 9, 2020"
@@ -118,6 +151,7 @@ class UserProfile(BaseDriver):
                     self.log.info(date)
                     indexOfPost = totalPosts - 1
                     self.log.info("we found the first post that is before the given date of {dateGiven} \n the number of loops it took to get here was {numberOfLoops} \n the index of the first post is {indexOfPost} \n".format(dateGiven = dateOfInterestTempVar, numberOfLoops = numberOfLoops,indexOfPost = indexOfPost))    
+                    self.fake_delete_post(lastPost)
                     match = True
                 else:
                     self.log.info("the current post is NOT before the date of interest ({})".format(dateOfInterestTempVar))
@@ -132,6 +166,28 @@ class UserProfile(BaseDriver):
                 totalPosts = len(posts)
 
         return indexOfPost
+
+    def delete_post(self,post):
+        height = post.size['height']
+        self.scroll_to_element(post)
+        script = "window.scrollBy(0,-{});".format(height/2)
+        self.driver.execute_script(script)
+        self.click_options_for_this_post(post)
+        time.sleep(4)
+        self.click_move_to_trash_button()
+        time.sleep(4)
+        self.click_finalize_move_to_trash_button()
+
+    def fake_delete_post(self,post):
+        height = post.size['height']
+        self.scroll_to_element(post)
+        script = "window.scrollBy(0,-{});".format(height/2)
+        self.driver.execute_script(script)
+        self.click_options_for_this_post(post)
+        time.sleep(4)
+        self.click_move_to_trash_button()
+        time.sleep(4)
+        self.click_cancel_move_to_trash_button()
 
 
 
