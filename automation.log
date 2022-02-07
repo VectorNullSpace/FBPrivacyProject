@@ -1,183 +1,375 @@
-Sun 02/06/2022 05:27:41 PM - INFO - FBLandingPage : attempting to enter email
-Sun 02/06/2022 05:27:41 PM - INFO - FBLandingPage : Typed email into email field successfully
-Sun 02/06/2022 05:27:41 PM - INFO - FBLandingPage : attempting to enter password
-Sun 02/06/2022 05:27:41 PM - INFO - FBLandingPage : Typed password into password field successfully
-Sun 02/06/2022 05:27:41 PM - INFO - FBLandingPage : attempting to click login
-Sun 02/06/2022 05:27:43 PM - INFO - FBHomePage : attempting to click user profile
-Sun 02/06/2022 05:27:46 PM - INFO - FBHomePage : clicked user profile successfully
-Sun 02/06/2022 05:27:56 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
-Sun 02/06/2022 05:28:00 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 05:28:00 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:00 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:02 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 05:28:02 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:02 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:04 PM - INFO - UserProfile : June 6, 2021
-Sun 02/06/2022 05:28:04 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:04 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:06 PM - INFO - UserProfile : May 11, 2021
-Sun 02/06/2022 05:28:06 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:06 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:08 PM - INFO - UserProfile : April 18, 2021
-Sun 02/06/2022 05:28:08 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:08 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:10 PM - INFO - UserProfile : March 28, 2021
-Sun 02/06/2022 05:28:10 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:10 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:12 PM - INFO - UserProfile : February 12, 2021
-Sun 02/06/2022 05:28:12 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:12 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:14 PM - INFO - UserProfile : December 9, 2020
-Sun 02/06/2022 05:28:14 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:14 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:16 PM - INFO - UserProfile : November 17, 2020
-Sun 02/06/2022 05:28:16 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:16 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:18 PM - INFO - UserProfile : October 31, 2020
-Sun 02/06/2022 05:28:18 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:18 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:20 PM - INFO - UserProfile : September 7, 2020
-Sun 02/06/2022 05:28:20 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:20 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:22 PM - INFO - UserProfile : July 30, 2020
-Sun 02/06/2022 05:28:22 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:22 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:24 PM - INFO - UserProfile : June 14, 2020
-Sun 02/06/2022 05:28:24 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:24 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:27 PM - INFO - UserProfile : May 8, 2020
-Sun 02/06/2022 05:28:27 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:27 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:29 PM - INFO - UserProfile : February 23, 2020
-Sun 02/06/2022 05:28:29 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:29 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:31 PM - INFO - UserProfile : November 12, 2019
-Sun 02/06/2022 05:28:31 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:31 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:33 PM - INFO - UserProfile : October 23, 2019
-Sun 02/06/2022 05:28:33 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:33 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:35 PM - INFO - UserProfile : October 1, 2019
-Sun 02/06/2022 05:28:35 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:35 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:37 PM - INFO - UserProfile : July 22, 2019
-Sun 02/06/2022 05:28:37 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:37 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:39 PM - INFO - UserProfile : June 29, 2019
-Sun 02/06/2022 05:28:39 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:39 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:41 PM - INFO - UserProfile : June 16, 2019
-Sun 02/06/2022 05:28:41 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:41 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:43 PM - INFO - UserProfile : February 6, 2019
-Sun 02/06/2022 05:28:43 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:43 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:45 PM - INFO - UserProfile : December 22, 2018
-Sun 02/06/2022 05:28:45 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:45 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:47 PM - INFO - UserProfile : December 9, 2018
-Sun 02/06/2022 05:28:47 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:47 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:50 PM - INFO - UserProfile : November 30, 2018
-Sun 02/06/2022 05:28:50 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:28:50 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:28:50 PM - INFO - UserProfile : We found the first post!
-Sun 02/06/2022 05:28:50 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 05:28:50 PM - INFO - UserProfile : November 30, 2018
-Sun 02/06/2022 05:28:50 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
- the number of loops it took to get here was 24 
- the index of the first post is 113 
-
-Sun 02/06/2022 05:28:50 PM - INFO - TestDeleteOldPosts : 114
-Sun 02/06/2022 05:46:48 PM - INFO - FBLandingPage : attempting to enter email
-Sun 02/06/2022 05:46:48 PM - INFO - FBLandingPage : Typed email into email field successfully
-Sun 02/06/2022 05:46:48 PM - INFO - FBLandingPage : attempting to enter password
-Sun 02/06/2022 05:46:48 PM - INFO - FBLandingPage : Typed password into password field successfully
-Sun 02/06/2022 05:46:48 PM - INFO - FBLandingPage : attempting to click login
-Sun 02/06/2022 05:46:50 PM - INFO - FBHomePage : attempting to click user profile
-Sun 02/06/2022 05:46:52 PM - INFO - FBHomePage : clicked user profile successfully
-Sun 02/06/2022 05:47:02 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
-Sun 02/06/2022 05:47:06 PM - INFO - UserProfile : September 2, 2021
-Sun 02/06/2022 05:47:06 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:06 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:08 PM - INFO - UserProfile : July 11, 2021
-Sun 02/06/2022 05:47:08 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:08 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:10 PM - INFO - UserProfile : June 6, 2021
-Sun 02/06/2022 05:47:10 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:10 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:12 PM - INFO - UserProfile : May 11, 2021
-Sun 02/06/2022 05:47:12 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:12 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:14 PM - INFO - UserProfile : April 18, 2021
-Sun 02/06/2022 05:47:14 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:14 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:16 PM - INFO - UserProfile : March 28, 2021
-Sun 02/06/2022 05:47:16 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:16 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:19 PM - INFO - UserProfile : February 12, 2021
-Sun 02/06/2022 05:47:19 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:19 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:21 PM - INFO - UserProfile : December 9, 2020
-Sun 02/06/2022 05:47:21 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:21 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:23 PM - INFO - UserProfile : November 17, 2020
-Sun 02/06/2022 05:47:23 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:23 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:25 PM - INFO - UserProfile : October 31, 2020
-Sun 02/06/2022 05:47:25 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:25 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:27 PM - INFO - UserProfile : September 7, 2020
-Sun 02/06/2022 05:47:27 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:27 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:29 PM - INFO - UserProfile : July 30, 2020
-Sun 02/06/2022 05:47:29 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:29 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:31 PM - INFO - UserProfile : June 14, 2020
-Sun 02/06/2022 05:47:31 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:31 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:33 PM - INFO - UserProfile : May 8, 2020
-Sun 02/06/2022 05:47:33 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:33 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:35 PM - INFO - UserProfile : February 23, 2020
-Sun 02/06/2022 05:47:35 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:35 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:37 PM - INFO - UserProfile : November 12, 2019
-Sun 02/06/2022 05:47:37 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:37 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:39 PM - INFO - UserProfile : October 23, 2019
-Sun 02/06/2022 05:47:39 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:39 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:41 PM - INFO - UserProfile : October 1, 2019
-Sun 02/06/2022 05:47:41 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:41 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:44 PM - INFO - UserProfile : July 22, 2019
-Sun 02/06/2022 05:47:44 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:44 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:46 PM - INFO - UserProfile : June 29, 2019
-Sun 02/06/2022 05:47:46 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:46 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:48 PM - INFO - UserProfile : June 16, 2019
-Sun 02/06/2022 05:47:48 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:48 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:50 PM - INFO - UserProfile : February 6, 2019
-Sun 02/06/2022 05:47:50 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:50 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:52 PM - INFO - UserProfile : December 22, 2018
-Sun 02/06/2022 05:47:52 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:52 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:54 PM - INFO - UserProfile : December 9, 2018
-Sun 02/06/2022 05:47:54 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:54 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : November 30, 2018
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : Does the date match the proper format? True
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2018)
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : We found the first post!
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : JP Payano
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : November 30, 2018
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
+Sun 02/06/2022 07:13:11 PM - INFO - FBLandingPage : attempting to enter email
+Sun 02/06/2022 07:13:11 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sun 02/06/2022 07:13:11 PM - INFO - FBLandingPage : attempting to enter password
+Sun 02/06/2022 07:13:11 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sun 02/06/2022 07:13:11 PM - INFO - FBLandingPage : attempting to click login
+Sun 02/06/2022 07:13:13 PM - INFO - FBHomePage : attempting to click user profile
+Sun 02/06/2022 07:13:15 PM - INFO - FBHomePage : clicked user profile successfully
+Sun 02/06/2022 07:13:30 PM - INFO - UserProfile : attempting to click the options for this post button
+Sun 02/06/2022 07:13:30 PM - INFO - UserProfile : clicked on options button successfully
+Sun 02/06/2022 07:13:34 PM - INFO - UserProfile : attempting to click move to trash button
+Sun 02/06/2022 07:13:34 PM - INFO - UserProfile : clicked move to trash button successfully
+Sun 02/06/2022 07:13:38 PM - INFO - UserProfile : attempting to click on the final move to trash button
+Sun 02/06/2022 07:13:38 PM - INFO - UserProfile : clicked on the final move to trash button successfully
+Sun 02/06/2022 07:17:09 PM - INFO - FBLandingPage : attempting to enter email
+Sun 02/06/2022 07:17:10 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sun 02/06/2022 07:17:10 PM - INFO - FBLandingPage : attempting to enter password
+Sun 02/06/2022 07:17:10 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sun 02/06/2022 07:17:10 PM - INFO - FBLandingPage : attempting to click login
+Sun 02/06/2022 07:17:12 PM - INFO - FBHomePage : attempting to click user profile
+Sun 02/06/2022 07:17:14 PM - INFO - FBHomePage : clicked user profile successfully
+Sun 02/06/2022 07:17:24 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
+Sun 02/06/2022 07:17:28 PM - INFO - UserProfile : September 2, 2021
+Sun 02/06/2022 07:17:28 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:28 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:30 PM - INFO - UserProfile : July 11, 2021
+Sun 02/06/2022 07:17:30 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:30 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:32 PM - INFO - UserProfile : June 6, 2021
+Sun 02/06/2022 07:17:32 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:32 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:34 PM - INFO - UserProfile : May 11, 2021
+Sun 02/06/2022 07:17:34 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:34 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:36 PM - INFO - UserProfile : April 18, 2021
+Sun 02/06/2022 07:17:36 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:36 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:38 PM - INFO - UserProfile : March 28, 2021
+Sun 02/06/2022 07:17:38 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:38 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:40 PM - INFO - UserProfile : February 12, 2021
+Sun 02/06/2022 07:17:40 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:40 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:43 PM - INFO - UserProfile : December 9, 2020
+Sun 02/06/2022 07:17:43 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:43 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:45 PM - INFO - UserProfile : November 17, 2020
+Sun 02/06/2022 07:17:45 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:45 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:47 PM - INFO - UserProfile : October 31, 2020
+Sun 02/06/2022 07:17:47 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:47 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:49 PM - INFO - UserProfile : September 7, 2020
+Sun 02/06/2022 07:17:49 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:49 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:51 PM - INFO - UserProfile : July 30, 2020
+Sun 02/06/2022 07:17:51 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:51 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:53 PM - INFO - UserProfile : June 14, 2020
+Sun 02/06/2022 07:17:53 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:53 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:55 PM - INFO - UserProfile : May 8, 2020
+Sun 02/06/2022 07:17:55 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:55 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:57 PM - INFO - UserProfile : February 23, 2020
+Sun 02/06/2022 07:17:57 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:57 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:17:59 PM - INFO - UserProfile : November 12, 2019
+Sun 02/06/2022 07:17:59 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:17:59 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:01 PM - INFO - UserProfile : October 23, 2019
+Sun 02/06/2022 07:18:01 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:01 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:03 PM - INFO - UserProfile : October 1, 2019
+Sun 02/06/2022 07:18:03 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:03 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:05 PM - INFO - UserProfile : July 22, 2019
+Sun 02/06/2022 07:18:05 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:05 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:07 PM - INFO - UserProfile : June 29, 2019
+Sun 02/06/2022 07:18:07 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:07 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:10 PM - INFO - UserProfile : June 16, 2019
+Sun 02/06/2022 07:18:10 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:10 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:12 PM - INFO - UserProfile : February 6, 2019
+Sun 02/06/2022 07:18:12 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:12 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:14 PM - INFO - UserProfile : January 9, 2019
+Sun 02/06/2022 07:18:14 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:14 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:16 PM - INFO - UserProfile : December 14, 2018
+Sun 02/06/2022 07:18:16 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:16 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:18 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 07:18:18 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:18:18 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:18:18 PM - INFO - UserProfile : We found the first post!
+Sun 02/06/2022 07:18:18 PM - INFO - UserProfile : JP Payano
+Sun 02/06/2022 07:18:18 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 07:18:18 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
  the number of loops it took to get here was 24 
  the index of the first post is 114 
 
-Sun 02/06/2022 05:47:56 PM - INFO - UserProfile : attempting to move to trash button
-Sun 02/06/2022 05:47:56 PM - WARNING - UserProfile : childe element did not exist
+Sun 02/06/2022 07:18:19 PM - INFO - UserProfile : attempting to click the options for this post button
+Sun 02/06/2022 07:18:19 PM - INFO - UserProfile : clicked on options button successfully
+Sun 02/06/2022 07:18:23 PM - INFO - UserProfile : attempting to click move to trash button
+Sun 02/06/2022 07:18:23 PM - INFO - UserProfile : clicked move to trash button successfully
+Sun 02/06/2022 07:18:27 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Sun 02/06/2022 07:18:37 PM - WARNING - UserProfile : element did not exist
+Sun 02/06/2022 07:18:38 PM - INFO - TestDeleteOldPosts : 114
+Sun 02/06/2022 07:19:27 PM - INFO - FBLandingPage : attempting to enter email
+Sun 02/06/2022 07:19:27 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sun 02/06/2022 07:19:27 PM - INFO - FBLandingPage : attempting to enter password
+Sun 02/06/2022 07:19:27 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sun 02/06/2022 07:19:27 PM - INFO - FBLandingPage : attempting to click login
+Sun 02/06/2022 07:19:29 PM - INFO - FBHomePage : attempting to click user profile
+Sun 02/06/2022 07:19:32 PM - INFO - FBHomePage : clicked user profile successfully
+Sun 02/06/2022 07:19:42 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
+Sun 02/06/2022 07:19:46 PM - INFO - UserProfile : September 2, 2021
+Sun 02/06/2022 07:19:46 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:19:46 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:19:48 PM - INFO - UserProfile : July 11, 2021
+Sun 02/06/2022 07:19:48 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:19:48 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:19:50 PM - INFO - UserProfile : June 6, 2021
+Sun 02/06/2022 07:19:50 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:19:50 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:19:52 PM - INFO - UserProfile : May 11, 2021
+Sun 02/06/2022 07:19:52 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:19:52 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:19:54 PM - INFO - UserProfile : April 18, 2021
+Sun 02/06/2022 07:19:54 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:19:54 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:19:56 PM - INFO - UserProfile : March 28, 2021
+Sun 02/06/2022 07:19:56 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:19:56 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:19:58 PM - INFO - UserProfile : February 12, 2021
+Sun 02/06/2022 07:19:58 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:19:58 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:00 PM - INFO - UserProfile : December 9, 2020
+Sun 02/06/2022 07:20:00 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:00 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:02 PM - INFO - UserProfile : November 17, 2020
+Sun 02/06/2022 07:20:02 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:02 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:04 PM - INFO - UserProfile : October 31, 2020
+Sun 02/06/2022 07:20:04 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:04 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:06 PM - INFO - UserProfile : September 7, 2020
+Sun 02/06/2022 07:20:06 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:06 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:08 PM - INFO - UserProfile : July 30, 2020
+Sun 02/06/2022 07:20:08 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:08 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:11 PM - INFO - UserProfile : June 14, 2020
+Sun 02/06/2022 07:20:11 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:11 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:13 PM - INFO - UserProfile : May 8, 2020
+Sun 02/06/2022 07:20:13 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:13 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:15 PM - INFO - UserProfile : February 23, 2020
+Sun 02/06/2022 07:20:15 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:15 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:17 PM - INFO - UserProfile : November 12, 2019
+Sun 02/06/2022 07:20:17 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:17 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:19 PM - INFO - UserProfile : October 23, 2019
+Sun 02/06/2022 07:20:19 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:19 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:21 PM - INFO - UserProfile : October 1, 2019
+Sun 02/06/2022 07:20:21 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:21 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:23 PM - INFO - UserProfile : July 22, 2019
+Sun 02/06/2022 07:20:23 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:23 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:25 PM - INFO - UserProfile : June 29, 2019
+Sun 02/06/2022 07:20:25 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:25 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:27 PM - INFO - UserProfile : June 16, 2019
+Sun 02/06/2022 07:20:27 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:27 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:29 PM - INFO - UserProfile : February 6, 2019
+Sun 02/06/2022 07:20:29 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:29 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:31 PM - INFO - UserProfile : December 22, 2018
+Sun 02/06/2022 07:20:31 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:31 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:33 PM - INFO - UserProfile : December 9, 2018
+Sun 02/06/2022 07:20:33 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:33 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:36 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 07:20:36 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:20:36 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:20:36 PM - INFO - UserProfile : We found the first post!
+Sun 02/06/2022 07:20:36 PM - INFO - UserProfile : JP Payano
+Sun 02/06/2022 07:20:36 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 07:20:36 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
+ the number of loops it took to get here was 24 
+ the index of the first post is 114 
+
+Sun 02/06/2022 07:20:37 PM - INFO - UserProfile : attempting to click the options for this post button
+Sun 02/06/2022 07:20:37 PM - INFO - UserProfile : clicked on options button successfully
+Sun 02/06/2022 07:20:41 PM - INFO - UserProfile : attempting to click move to trash button
+Sun 02/06/2022 07:20:41 PM - INFO - UserProfile : clicked move to trash button successfully
+Sun 02/06/2022 07:20:45 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Sun 02/06/2022 07:35:54 PM - INFO - FBLandingPage : attempting to enter email
+Sun 02/06/2022 07:35:54 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sun 02/06/2022 07:35:54 PM - INFO - FBLandingPage : attempting to enter password
+Sun 02/06/2022 07:35:54 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sun 02/06/2022 07:35:54 PM - INFO - FBLandingPage : attempting to click login
+Sun 02/06/2022 07:35:56 PM - INFO - FBHomePage : attempting to click user profile
+Sun 02/06/2022 07:35:57 PM - INFO - FBHomePage : clicked user profile successfully
+Sun 02/06/2022 07:36:07 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
+Sun 02/06/2022 07:36:12 PM - INFO - UserProfile : September 2, 2021
+Sun 02/06/2022 07:36:12 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:12 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:14 PM - INFO - UserProfile : July 11, 2021
+Sun 02/06/2022 07:36:14 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:14 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:16 PM - INFO - UserProfile : June 6, 2021
+Sun 02/06/2022 07:36:16 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:16 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:18 PM - INFO - UserProfile : May 11, 2021
+Sun 02/06/2022 07:36:18 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:18 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:20 PM - INFO - UserProfile : April 18, 2021
+Sun 02/06/2022 07:36:20 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:20 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:22 PM - INFO - UserProfile : March 28, 2021
+Sun 02/06/2022 07:36:22 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:22 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:24 PM - INFO - UserProfile : February 12, 2021
+Sun 02/06/2022 07:36:24 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:24 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:26 PM - INFO - UserProfile : January 25, 2021
+Sun 02/06/2022 07:36:26 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:26 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:28 PM - INFO - UserProfile : November 17, 2020
+Sun 02/06/2022 07:36:28 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:28 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:30 PM - INFO - UserProfile : October 31, 2020
+Sun 02/06/2022 07:36:30 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:30 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:32 PM - INFO - UserProfile : September 7, 2020
+Sun 02/06/2022 07:36:32 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:32 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:34 PM - INFO - UserProfile : July 30, 2020
+Sun 02/06/2022 07:36:34 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:34 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:36 PM - INFO - UserProfile : June 14, 2020
+Sun 02/06/2022 07:36:36 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:36 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:38 PM - INFO - UserProfile : May 8, 2020
+Sun 02/06/2022 07:36:38 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:38 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:41 PM - INFO - UserProfile : February 23, 2020
+Sun 02/06/2022 07:36:41 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:41 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:43 PM - INFO - UserProfile : November 12, 2019
+Sun 02/06/2022 07:36:43 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:43 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:45 PM - INFO - UserProfile : October 23, 2019
+Sun 02/06/2022 07:36:45 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:45 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:47 PM - INFO - UserProfile : October 1, 2019
+Sun 02/06/2022 07:36:47 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:47 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:49 PM - INFO - UserProfile : July 22, 2019
+Sun 02/06/2022 07:36:49 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:49 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:51 PM - INFO - UserProfile : June 29, 2019
+Sun 02/06/2022 07:36:51 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:51 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:53 PM - INFO - UserProfile : June 16, 2019
+Sun 02/06/2022 07:36:53 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:36:53 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:36:53 PM - INFO - UserProfile : there were no posts that matched the criteria requested for deletion
+Sun 02/06/2022 07:36:53 PM - INFO - TestDeleteOldPosts : -1
+Sun 02/06/2022 07:40:30 PM - INFO - FBLandingPage : attempting to enter email
+Sun 02/06/2022 07:40:30 PM - INFO - FBLandingPage : Typed email into email field successfully
+Sun 02/06/2022 07:40:30 PM - INFO - FBLandingPage : attempting to enter password
+Sun 02/06/2022 07:40:30 PM - INFO - FBLandingPage : Typed password into password field successfully
+Sun 02/06/2022 07:40:30 PM - INFO - FBLandingPage : attempting to click login
+Sun 02/06/2022 07:40:32 PM - INFO - FBHomePage : attempting to click user profile
+Sun 02/06/2022 07:40:34 PM - INFO - FBHomePage : clicked user profile successfully
+Sun 02/06/2022 07:40:44 PM - INFO - UserProfile : searching for first post that is before the given date (December 9, 2018)
+Sun 02/06/2022 07:40:48 PM - INFO - UserProfile : September 2, 2021
+Sun 02/06/2022 07:40:48 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:40:48 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:40:50 PM - INFO - UserProfile : July 11, 2021
+Sun 02/06/2022 07:40:50 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:40:50 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:40:52 PM - INFO - UserProfile : June 6, 2021
+Sun 02/06/2022 07:40:52 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:40:52 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:40:54 PM - INFO - UserProfile : May 11, 2021
+Sun 02/06/2022 07:40:54 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:40:54 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:40:56 PM - INFO - UserProfile : April 18, 2021
+Sun 02/06/2022 07:40:56 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:40:56 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:40:58 PM - INFO - UserProfile : March 28, 2021
+Sun 02/06/2022 07:40:58 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:40:58 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:01 PM - INFO - UserProfile : February 12, 2021
+Sun 02/06/2022 07:41:01 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:01 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:03 PM - INFO - UserProfile : December 9, 2020
+Sun 02/06/2022 07:41:03 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:03 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:05 PM - INFO - UserProfile : November 17, 2020
+Sun 02/06/2022 07:41:05 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:05 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:07 PM - INFO - UserProfile : October 31, 2020
+Sun 02/06/2022 07:41:07 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:07 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:09 PM - INFO - UserProfile : September 7, 2020
+Sun 02/06/2022 07:41:09 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:09 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:11 PM - INFO - UserProfile : July 30, 2020
+Sun 02/06/2022 07:41:11 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:11 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:13 PM - INFO - UserProfile : June 14, 2020
+Sun 02/06/2022 07:41:13 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:13 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:15 PM - INFO - UserProfile : May 8, 2020
+Sun 02/06/2022 07:41:15 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:15 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:17 PM - INFO - UserProfile : February 23, 2020
+Sun 02/06/2022 07:41:17 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:17 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:19 PM - INFO - UserProfile : November 12, 2019
+Sun 02/06/2022 07:41:19 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:19 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:21 PM - INFO - UserProfile : October 23, 2019
+Sun 02/06/2022 07:41:21 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:21 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:23 PM - INFO - UserProfile : October 1, 2019
+Sun 02/06/2022 07:41:23 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:23 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:25 PM - INFO - UserProfile : July 22, 2019
+Sun 02/06/2022 07:41:25 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:25 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:28 PM - INFO - UserProfile : June 29, 2019
+Sun 02/06/2022 07:41:28 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:28 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:30 PM - INFO - UserProfile : June 16, 2019
+Sun 02/06/2022 07:41:30 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:30 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:32 PM - INFO - UserProfile : February 6, 2019
+Sun 02/06/2022 07:41:32 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:32 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:34 PM - INFO - UserProfile : December 22, 2018
+Sun 02/06/2022 07:41:34 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:34 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:36 PM - INFO - UserProfile : December 9, 2018
+Sun 02/06/2022 07:41:36 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:36 PM - INFO - UserProfile : the current post is NOT before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:38 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 07:41:38 PM - INFO - UserProfile : Does the date match the proper format? True
+Sun 02/06/2022 07:41:38 PM - INFO - UserProfile : the current post is before the date of interest (December 9, 2018)
+Sun 02/06/2022 07:41:38 PM - INFO - UserProfile : We found the first post!
+Sun 02/06/2022 07:41:38 PM - INFO - UserProfile : JP Payano
+Sun 02/06/2022 07:41:38 PM - INFO - UserProfile : November 30, 2018
+Sun 02/06/2022 07:41:38 PM - INFO - UserProfile : we found the first post that is before the given date of December 9, 2018 
+ the number of loops it took to get here was 24 
+ the index of the first post is 114 
+
+Sun 02/06/2022 07:41:39 PM - INFO - UserProfile : attempting to click the options for this post button
+Sun 02/06/2022 07:41:39 PM - INFO - UserProfile : clicked on options button successfully
+Sun 02/06/2022 07:41:43 PM - INFO - UserProfile : attempting to click move to trash button
+Sun 02/06/2022 07:41:43 PM - INFO - UserProfile : clicked move to trash button successfully
+Sun 02/06/2022 07:41:47 PM - INFO - UserProfile : attempting to click on the cancel move to trash button
+Sun 02/06/2022 07:41:47 PM - INFO - UserProfile : clicked on the cancel move to trash button successfully
+Sun 02/06/2022 07:41:47 PM - INFO - TestDeleteOldPosts : 114

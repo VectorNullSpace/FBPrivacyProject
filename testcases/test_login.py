@@ -1,11 +1,4 @@
-#go to yatra
-#one way search
-#select depart and go to 
-# choose a depart date
-#click on search flight
-#next page is the search flight
-#select 1 stop filter
-#verify that all the instances show 1 stop
+
 import softest
 import pytest
 from utilities.utils import Utils
