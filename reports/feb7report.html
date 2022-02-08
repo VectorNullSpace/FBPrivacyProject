@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>JP&apos;s Automation Report</h1>
-    <p>Report generated on 07-Feb-2022 at 18:16:05 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 07-Feb-2022 at 19:39:17 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,7 +259,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.9.10</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 191.79 seconds. </p>
+    <p>1 tests ran in 465.82 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -274,8 +274,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">testcases/test_login.py::TestDeleteOldPosts::test_login_to_fb</td>
-          <td class="col-duration">191.58</td>
+          <td class="col-name">testcases/test_delete_posts.py::TestDeleteOldPosts::test_delete_fb_posts_1_data</td>
+          <td class="col-duration">465.61</td>
           <td class="col-links"><a class="url" href="http://www.facebook.com/" target="_blank">URL</a> </td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -297,487 +297,307 @@ INFO     FBLandingPage:FB_landing_page.py:50 Typed password into password field 
 INFO     FBLandingPage:FB_landing_page.py:55 attempting to click login
 INFO     FBHomePage:FB_home_page.py:23 attempting to click user profile
 INFO     FBHomePage:FB_home_page.py:27 clicked user profile successfully
-INFO     UserProfile:FB_user_profile_page.py:143 searching for first post that is before the given date (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:143 searching for first post that is before the given date (March 13, 2017)
 INFO     UserProfile:FB_user_profile_page.py:178 waiting in case of sync issue
-INFO     UserProfile:FB_user_profile_page.py:159 the current post is before the date of interest (November 30, 2018)
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+INFO     UserProfile:FB_user_profile_page.py:178 waiting in case of sync issue
+INFO     UserProfile:FB_user_profile_page.py:178 waiting in case of sync issue
+INFO     UserProfile:FB_user_profile_page.py:178 waiting in case of sync issue
+INFO     UserProfile:FB_user_profile_page.py:159 the current post is before the date of interest (March 11, 2017)
 INFO     UserProfile:FB_user_profile_page.py:160 We found the first post!
 INFO     UserProfile:FB_user_profile_page.py:163 JP Payano
-INFO     UserProfile:FB_user_profile_page.py:164 November 30, 2018
-INFO     UserProfile:FB_user_profile_page.py:166 we found the first post that is before the given date of December 9, 2018 
- the number of loops it took to get here was 32 
- the index of the first post is 114 
+INFO     UserProfile:FB_user_profile_page.py:164 March 11, 2017
+INFO     UserProfile:FB_user_profile_page.py:166 we found the first post that is before the given date of March 13, 2017 
+ the number of loops it took to get here was 140 
+ the index of the first post is 478 
 
-INFO     UserProfile:FB_user_profile_page.py:221 this is the latest post before the date of interest (December 9, 2018)
+INFO     UserProfile:FB_user_profile_page.py:221 this is the latest post before the date of interest (March 14, 2017)
 INFO     UserProfile:FB_user_profile_page.py:222 We found the first post(to ignore)!
 INFO     UserProfile:FB_user_profile_page.py:225 JP Payano
-INFO     UserProfile:FB_user_profile_page.py:226 December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:228 we found the first post that is before the given date of December 9, 2018 
-  the index of the first post is 110 
+INFO     UserProfile:FB_user_profile_page.py:226 March 14, 2017
+INFO     UserProfile:FB_user_profile_page.py:228 we found the first post that is before the given date of March 13, 2017 
+  the index of the first post is 476 
 
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 1
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 9, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 2
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 3, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 14, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 12, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 11, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 3
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 1, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 6, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 4
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 6, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 5
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 3, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 6
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 11 and length of full text 45
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 25, 2018 name of poster: Daniel Wade fullText of name: Daniel Wade is with Jenny Tran and
-3 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 7
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 16 and length of full text 53
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 25, 2018 name of poster: Keneley Bautista fullText of name: Keneley Bautista is with Aurora Wagner and
-4 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 8
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 38
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 9
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 3, 2017 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 3, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 10
-WARNING  UserProfile:base_driver.py:44 childe element did not exist
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 13 and length of full text 51
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: no child element found name of poster: Aurora Wagner fullText of name: Aurora Wagner is with Lamont Houston and
-9 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 11
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 17, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 26, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:284 the number of total posts in the DOM is 121
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 10
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 22, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 11
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 20, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:79 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:98 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:284 the number of total posts in the DOM is 487
 INFO     UserProfile:FB_user_profile_page.py:285 The number of posts gone through last loop are 11
-INFO     UserProfile:FB_user_profile_page.py:286 The number of posts deleted last time were 6
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 1
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 9, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 2
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 3, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:286 The number of posts deleted last time were 8
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 14, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 12, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 3, 2017 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 20, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:79 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:98 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 18, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 3
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 1, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 18, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 4
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 18, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 5
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 18, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 6
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 11 and length of full text 45
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 25, 2018 name of poster: Daniel Wade fullText of name: Daniel Wade is with Jenny Tran and
-3 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 7
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 16 and length of full text 53
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 25, 2018 name of poster: Keneley Bautista fullText of name: Keneley Bautista is with Aurora Wagner and
-4 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 8
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 38
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 9
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 15, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 10
-WARNING  UserProfile:base_driver.py:44 childe element did not exist
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 13 and length of full text 51
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: no child element found name of poster: Aurora Wagner fullText of name: Aurora Wagner is with Lamont Houston and
-9 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 11
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 17, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 10
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 12, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:79 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:98 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:284 the number of total posts in the DOM is 486
+INFO     UserProfile:FB_user_profile_page.py:285 The number of posts gone through last loop are 10
+INFO     UserProfile:FB_user_profile_page.py:286 The number of posts deleted last time were 7
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 14, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 12, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: March 3, 2017 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 20, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:79 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:98 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 12, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:79 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:98 element did not exist
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 9, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 12
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 15, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-WARNING  UserProfile:FB_user_profile_page.py:81 element click intercepted attempting to move a little and retry
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 13
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 14, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 8, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 8, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 14
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 12, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 6, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 15
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 10
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: February 5, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:247 current post meets the criteria
 INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
 INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
 INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
 INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 16
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 29
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano updated his status.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 17
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 43
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 5, 2018 name of poster: JP Payano fullText of name: JP Payano shared an episode of Inside Look.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:284 the number of total posts in the DOM is 127
-INFO     UserProfile:FB_user_profile_page.py:285 The number of posts gone through last loop are 17
-INFO     UserProfile:FB_user_profile_page.py:286 The number of posts deleted last time were 10
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 1
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 9, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 2
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 3, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 3
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: December 1, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 4
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 5
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 30, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 6
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 11 and length of full text 45
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 25, 2018 name of poster: Daniel Wade fullText of name: Daniel Wade is with Jenny Tran and
-3 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 7
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 16 and length of full text 53
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 25, 2018 name of poster: Keneley Bautista fullText of name: Keneley Bautista is with Aurora Wagner and
-4 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 8
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 38
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 9
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 24, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 10
-WARNING  UserProfile:base_driver.py:44 childe element did not exist
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 13 and length of full text 51
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: no child element found name of poster: Aurora Wagner fullText of name: Aurora Wagner is with Lamont Houston and
-9 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 11
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 17, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 12
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 15, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-WARNING  UserProfile:FB_user_profile_page.py:81 element click intercepted attempting to move a little and retry
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 13
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 14, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 14
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 12, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 15
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 16
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 29
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 10, 2018 name of poster: JP Payano fullText of name: JP Payano updated his status.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 17
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 43
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 5, 2018 name of poster: JP Payano fullText of name: JP Payano shared an episode of Inside Look.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 18
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 15 and length of full text 53
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: November 1, 2018 name of poster: Armando Delgado fullText of name: Armando Delgado is with Andre Barbosa and
-10 others
-.
-INFO     UserProfile:FB_user_profile_page.py:250 the current post does NOT meet criteria
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 19
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: October 30, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:271 this is post number 20
-INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:December 9, 2018
-INFO     UserProfile:FB_user_profile_page.py:242 length of name text 9 and length of full text 9
-INFO     UserProfile:FB_user_profile_page.py:243 date of post: October 25, 2018 name of poster: JP Payano fullText of name: JP Payano
-INFO     UserProfile:FB_user_profile_page.py:248 current post meets the criteria
-INFO     UserProfile:FB_user_profile_page.py:63 attempting to click the options for this post button
-INFO     UserProfile:FB_user_profile_page.py:68 clicked on options button successfully
-INFO     UserProfile:FB_user_profile_page.py:74 attempting to click move to trash button
-INFO     UserProfile:FB_user_profile_page.py:77 clicked move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:101 attempting to click on the cancel move to trash button
-INFO     UserProfile:FB_user_profile_page.py:104 clicked on the cancel move to trash button successfully
-INFO     UserProfile:FB_user_profile_page.py:204 post has been fake deleted
-INFO     UserProfile:FB_user_profile_page.py:279 the number of posts looked at are 48 and the number of deleted among them are 28
+INFO     UserProfile:FB_user_profile_page.py:93 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:96 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:196 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:270 this is post number 11
+INFO     UserProfile:FB_user_profile_page.py:241 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:242 date of post: January 28, 2017 name of poster: JP Payano fullText of name: JP Payano shared an episode of Robert Reich.
+INFO     UserProfile:FB_user_profile_page.py:249 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:279 the number of posts looked at are 32 and the number of deleted among them are 21
 INFO     UserProfile:FB_user_profile_page.py:280 the number of loops around were 2<br/></div></td></tr></tbody></table></body></html>

@@ -239,7 +239,6 @@ class UserProfile(BaseDriver):
         fullTextOfPoster = self.get_name_of_posterFULL(post)
         meetsCriteria = False
         self.log.info("the criteria is as follows username: {} date:{}".format(usersName,dateOfInterest))
-        self.log.info("length of name text {} and length of full text {}".format(len(poster),len(fullTextOfPoster)))
         self.log.info("date of post: {} name of poster: {} fullText of name: {}".format(date,poster,fullTextOfPoster))
         if Utils.validate(date):
             meetsCriteria = (Utils.is_before(dateOfInterest,date) and Utils.does_text_match(poster,usersName) and Utils.does_text_length_match(poster,fullTextOfPoster))
@@ -270,10 +269,11 @@ class UserProfile(BaseDriver):
                     post = posts[i]
                     self.log.info("this is post number {}".format(numberOfPostsLookedAt))
                     self.scroll_to_element(post)
+                    time.sleep(2)
                     if self.postMeetsCriteria(post,dateOfInterest,usersName):
                         numberOfPostsDeleted = numberOfPostsDeleted + 1
                         totalPostsDeleted = totalPostsDeleted + 1
-                        self.fake_delete_post(post)
+                        self.delete_post(post)
 
                 if totalPostslookedat > 30:
                     self.log.info("the number of posts looked at are {numberOfPosts} and the number of deleted among them are {numberOfPostsDeleted}".format(numberOfPosts = totalPostslookedat,numberOfPostsDeleted=totalPostsDeleted))
@@ -287,7 +287,7 @@ class UserProfile(BaseDriver):
                     numberOfPostsLookedAt = 0
                     numberOfPostsDeleted = 0
                     posts = self.get_all_posts()
-                    # startingPostIndex = startingPostIndex + numberOfPostsLookedAt - numberOfPostsDeleted 
+                    startingPostIndex = startingPostIndex + numberOfPostsLookedAt - numberOfPostsDeleted 
                     totalPosts = len(posts)
                     numberOfLoops = numberOfLoops + 1
 

@@ -52,8 +52,13 @@ class BaseDriver:
             self.driver.execute_script(script)
 
         except StaleElementReferenceException:
-            self.driver.execute_script("window.scrollBy(0 , 2000 );")
-            self.log.warning("stale reference")
+            self.driver.execute_script("window.scrollBy(0 , 4000 );")
+            time.sleep(2)
+            self.log.warning("stale reference but trying again")
+            height = element.size['height']
+            script = "window.scrollBy(0,-{});".format(height/2)
+            self.driver.execute_script(script)
+            
 
 
     def zoom_out(self):

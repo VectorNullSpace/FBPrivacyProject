@@ -22,15 +22,12 @@ class TestDeleteOldPosts(softest.TestCase):
 
         
 
-    # @file_data("../testdata/data_json.json")
-    def test_login_to_fb(self):
+    @file_data("../testdata/data_json.json")
+    def test_delete_fb_posts(self,dateOfInterest):
         #note four arguments and four per test case in the data tag
         fb_home = self.lp.loginToFB()
         time.sleep(2)
         fb_userProfile = fb_home.navigateToUserProfile()
-        # fb_userProfile.go_through_posts()
-        # self.log.info(indexOfFirstPost)
-        dateOfInterest = "December 9, 2018"
         usersName = fb_userProfile.get_users_name()
         indexOfFirstPost = fb_userProfile.find_first_post_before_date(dateOfInterest)
         fb_userProfile.go_through_posts_and_delete(dateOfInterest,usersName,indexOfFirstPost)
