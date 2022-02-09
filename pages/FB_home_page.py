@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 import time
 from selenium.common.exceptions import NoSuchElementException
 from base.base_driver import BaseDriver
-from utilities.utils import Utils
+from utilities.utils import Utils , ExceptionHandler
 from pages.FB_user_profile_page import UserProfile
 
 
@@ -27,6 +27,8 @@ class FBHomePage(BaseDriver):
             self.log.info("clicked user profile successfully")
         except NoSuchElementException:
             self.log.warning("element did not exist")
+            ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+
 
     def navigateToUserProfile(self):
         self.clickUserProfile()

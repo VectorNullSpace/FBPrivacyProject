@@ -5,7 +5,7 @@ from email import utils
 import time
 from base.base_driver import BaseDriver
 from selenium.webdriver.common.by import  By
-from utilities.utils import  Utils
+from utilities.utils import  Utils, ExceptionHandler
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 
 class UserProfile(BaseDriver):
@@ -18,6 +18,7 @@ class UserProfile(BaseDriver):
  
     POST_ELEMENTS = "//div[@data-pagelet='ProfileTimeline']//div[@class='du4w35lb k4urcfbm l9j0dhe7 sjgh65i0']"
     DATE_ELEMENT_CHILD = ".//div[@class='qzhwtbm6 knvmm38d'][2]//a[@href='#']"
+    #".//div[@class='qzhwtbm6 knvmm38d'][2]//a[@href='#']" this is the original testing if removing the href part causes issues
     MOVE_TO_TRASH_BUTTON = "//span[normalize-space()='Move to trash']"
     FINALIZE_MOVE_TO_TRASH_BUTTON = "//div[@aria-label='Move'][1]"
     CANCEL_MOVE_TO_TRASH_BUTTON = "(//div[@aria-label='Cancel'])[2]"
@@ -77,7 +78,11 @@ class UserProfile(BaseDriver):
             self.log.info("clicked move to trash button successfully")
         except NoSuchElementException:
             self.log.warning("element did not exist")
+            ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+
         except ElementClickInterceptedException:
+            ExceptionHandler.handle_exception("ElementClickInterceptedException",self.take_screenshot())
+
             self.log.warning("element click intercepted attempting to move a little and retry")
             script = "window.scrollBy(0,400);"
             self.driver.execute_script(script)
@@ -96,6 +101,9 @@ class UserProfile(BaseDriver):
             self.log.info("clicked on the final move to trash button successfully")
         except NoSuchElementException:
             self.log.warning("element did not exist")
+            ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            
+
 
     def click_cancel_move_to_trash_button(self):
         self.log.info("attempting to click on the cancel move to trash button")
@@ -104,6 +112,8 @@ class UserProfile(BaseDriver):
             self.log.info("clicked on the cancel move to trash button successfully")
         except NoSuchElementException:
             self.log.warning("element did not exist")
+            ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+
     
     def go_through_posts(self):
         username = self.get_users_name()

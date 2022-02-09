@@ -112,3 +112,15 @@ class Utils(softest.TestCase):
         isBeforeDate = datetime.datetime.strptime(dateOfInterest, '%B %d, %Y')
         checkedDate = datetime.datetime.strptime(dateBeingChecked, '%B %d, %Y')
         return(isBeforeDate > checkedDate)
+
+
+class ExceptionHandler():
+
+    def handle_exception(exceptionName,screenshotname):
+        log = Utils.custom_logger()
+
+        log.warning("the type of exception: {}".format(exceptionName))
+        log.warning("the name of the screenshot for this exception is: {}".format(screenshotname))
+
+        for frame in inspect.trace():
+            log.warning("the function: {} and the the line: {}".format(frame.code_context,frame.lineno))
