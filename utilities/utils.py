@@ -1,5 +1,6 @@
 import inspect
-from attr import validate
+import traceback
+# from attr import validate
 import softest
 import logging
 from openpyxl import Workbook, load_workbook
@@ -85,14 +86,12 @@ class Utils(softest.TestCase):
         else:
             print("test faild")
 
-    def does_text_match(firstitem,seconditem):
-        if firstitem == seconditem:
+    def check_poster_text(username,postername):
+        if len(username) == len(postername):
             return True
-        else:
-            return False
-
-    def does_text_length_match(firstitem,seconditem):
-        if len(firstitem) == len(seconditem):
+        elif postername.startswith(username) and postername.endswith("status."):
+            return True
+        elif postername.startswith(username + " shared"):
             return True
         else:
             return False
@@ -121,6 +120,6 @@ class ExceptionHandler():
 
         log.warning("the type of exception: {}".format(exceptionName))
         log.warning("the name of the screenshot for this exception is: {}".format(screenshotname))
-
-        for frame in inspect.trace():
-            log.warning("the function: {} and the the line: {}".format(frame.code_context,frame.lineno))
+        # log.warning(traceback.format_exc())
+        # for frame in inspect.trace():
+        #     log.warning("the function: {} and the the line: {}".format(frame.code_context,frame.lineno))

@@ -1,4 +1,4 @@
-
+import traceback
 import inspect
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -43,6 +43,7 @@ class BaseDriver:
         except NoSuchElementException:
             self.log.warning("childe element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
             return "no child element found"
 
     def scroll_to_element(self,element):
