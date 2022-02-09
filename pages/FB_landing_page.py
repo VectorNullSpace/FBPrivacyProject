@@ -4,6 +4,7 @@ from selenium.common.exceptions import NoSuchElementException
 from base.base_driver import BaseDriver
 from pages.FB_home_page import FBHomePage
 from utilities.utils import Utils, ExceptionHandler
+import traceback
 
 class FBLandingPage(BaseDriver):
     log = Utils.custom_logger()
@@ -41,6 +42,8 @@ class FBLandingPage(BaseDriver):
 
         except NoSuchElementException:
             self.log.warning("element did not exist")
+            ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
             
     def enterPassword(self,password):
         self.log.info("attempting to enter password")
@@ -51,6 +54,7 @@ class FBLandingPage(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
 
 
     def clickLogin(self):
@@ -60,6 +64,7 @@ class FBLandingPage(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
 
      
     def loginToFB(self):

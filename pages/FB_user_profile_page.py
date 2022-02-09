@@ -1,5 +1,5 @@
 
-
+import traceback
 from ast import While
 from email import utils
 import time
@@ -79,9 +79,11 @@ class UserProfile(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
 
         except ElementClickInterceptedException:
             ExceptionHandler.handle_exception("ElementClickInterceptedException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
 
             self.log.warning("element click intercepted attempting to move a little and retry")
             script = "window.scrollBy(0,400);"
@@ -102,6 +104,7 @@ class UserProfile(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
             
 
 
@@ -113,6 +116,7 @@ class UserProfile(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
+            self.log.warning(traceback.extract_stack())
 
     
     def go_through_posts(self):
@@ -199,19 +203,29 @@ class UserProfile(BaseDriver):
         return indexOfPost
 
     def delete_post(self,post):
-        self.scroll_to_element(post)
-        self.click_options_for_this_post(post)
-        self.click_move_to_trash_button()
-        self.click_finalize_move_to_trash_button()
-        self.log.info("post hase been deleted")
+        try:
+            self.scroll_to_element(post)
+            self.click_options_for_this_post(post)
+            self.click_move_to_trash_button()
+            self.click_finalize_move_to_trash_button()
+            self.log.info("post has been deleted")
+            return True
+        except:
+            self.log.warning("post failed to delete")
+            return False
 
     def fake_delete_post(self,post):
-        self.scroll_to_element(post)
-        self.click_options_for_this_post(post)
-        self.click_move_to_trash_button()
-        time.sleep(2)
-        self.click_cancel_move_to_trash_button()
-        self.log.info("post has been fake deleted")
+        try:
+            self.scroll_to_element(post)
+            self.click_options_for_this_post(post)
+            self.click_move_to_trash_button()
+            time.sleep(2)
+            self.click_cancel_move_to_trash_button()
+            self.log.info("post has been fake deleted")
+            return True
+        except:
+            self.log.warning("post failed to fake delete")
+            return False
 
     def go_through_posts_backwards(self,dateOfInterest):
         posts = self.get_all_posts()
@@ -251,7 +265,7 @@ class UserProfile(BaseDriver):
         self.log.info("the criteria is as follows username: {} date:{}".format(usersName,dateOfInterest))
         self.log.info("date of post: {} name of poster: {} fullText of name: {}".format(date,poster,fullTextOfPoster))
         if Utils.validate(date):
-            meetsCriteria = (Utils.is_before(dateOfInterest,date) and Utils.does_text_match(poster,usersName) and Utils.does_text_length_match(poster,fullTextOfPoster))
+            meetsCriteria = (Utils.is_before(dateOfInterest,date) and Utils.check_poster_text(usersName,fullTextOfPoster))
         
         if meetsCriteria ==True:
             self.log.info("current post meets the criteria")
@@ -281,9 +295,11 @@ class UserProfile(BaseDriver):
                     self.scroll_to_element(post)
                     time.sleep(2)
                     if self.postMeetsCriteria(post,dateOfInterest,usersName):
-                        numberOfPostsDeleted = numberOfPostsDeleted + 1
-                        totalPostsDeleted = totalPostsDeleted + 1
-                        self.delete_post(post)
+                        if self.delete_post(post):
+                            numberOfPostsDeleted = numberOfPostsDeleted + 1
+                            totalPostsDeleted = totalPostsDeleted + 1
+
+                        
 
                 if totalPostslookedat > 30:
                     self.log.info("the number of posts looked at are {numberOfPosts} and the number of deleted among them are {numberOfPostsDeleted}".format(numberOfPosts = totalPostslookedat,numberOfPostsDeleted=totalPostsDeleted))
@@ -297,7 +313,7 @@ class UserProfile(BaseDriver):
                     numberOfPostsLookedAt = 0
                     numberOfPostsDeleted = 0
                     posts = self.get_all_posts()
-                    startingPostIndex = startingPostIndex + numberOfPostsLookedAt - numberOfPostsDeleted 
+                    startingPostIndex = startingPostIndex + totalPostslookedat - totalPostsDeleted 
                     totalPosts = len(posts)
                     numberOfLoops = numberOfLoops + 1
 
