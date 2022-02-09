@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css"/></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>JP&apos;s Automation Report</h1>
+    <p>Report generated on 08-Feb-2022 at 21:45:29 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "6.2.5"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>Windows-10-10.0.19042-SP0</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"Faker": "11.3.0", "html": "3.1.1", "metadata": "1.11.0"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.9.10</td></tr></table>
+    <h2>Summary</h2>
+    <p>1 tests ran in 383.41 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testcases/test_delete_posts.py::TestDeleteOldPosts::test_delete_fb_posts_1_data</td>
+          <td class="col-duration">382.94</td>
+          <td class="col-links"><a class="url" href="http://www.facebook.com/" target="_blank">URL</a> </td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div><div><img src="testcases/test_delete_posts.py_TestDeleteOldPosts_test_delete_fb_posts_1_data.png" alt="screenshot" style="width:300px;height:200px"onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;test_delete_posts.TestDeleteOldPosts testMethod=test_delete_fb_posts_1_data&gt;, dateOfInterest = &#x27;March 13, 2017&#x27;<br/><br/>    @file_data(&quot;../testdata/data_json.json&quot;)<br/>    def test_delete_fb_posts(self,dateOfInterest):<br/>        #note four arguments and four per test case in the data tag<br/>        fb_home = self.lp.loginToFB()<br/>        time.sleep(2)<br/>        fb_userProfile = fb_home.navigateToUserProfile()<br/>        usersName = fb_userProfile.get_users_name()<br/>        indexOfFirstPost = fb_userProfile.find_first_post_before_date(dateOfInterest)<br/>&gt;       fb_userProfile.go_through_posts_and_delete(dateOfInterest,usersName,indexOfFirstPost)<br/><br/>testcases\test_delete_posts.py:33: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>pages\FB_user_profile_page.py:283: in go_through_posts_and_delete<br/>    if self.postMeetsCriteria(post,dateOfInterest,usersName):<br/>pages\FB_user_profile_page.py:247: in postMeetsCriteria<br/>    date = self.get_date_from_post(post)<br/>pages\FB_user_profile_page.py:39: in get_date_from_post<br/>    child =  self.get_child_element(By.XPATH,post,self.DATE_ELEMENT_CHILD)<br/>base\base_driver.py:42: in get_child_element<br/>    return parent.find_element(locator_type,child_locator)<br/>..\..\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\selenium\webdriver\remote\webelement.py:735: in find_element<br/>    return self._execute(Command.FIND_CHILD_ELEMENT,<br/>..\..\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\selenium\webdriver\remote\webelement.py:710: in _execute<br/>    return self._parent.execute(command, params)<br/>..\..\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\selenium\webdriver\remote\webdriver.py:424: in execute<br/>    self.error_handler.check_response(response)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000268D2C4A5B0&gt;<br/>response = {&#x27;status&#x27;: 404, &#x27;value&#x27;: &#x27;{&quot;value&quot;:{&quot;error&quot;:&quot;stale element reference&quot;,&quot;message&quot;:&quot;stale element reference: element is n...\n\\tRtlGetAppContainerNamedObjectPath [0x77A87A9E+286]\\n\\tRtlGetAppContainerNamedObjectPath [0x77A87A6E+238]\\n&quot;}}&#x27;}<br/><br/>    def check_response(self, response: Dict[str, Any]) -&gt; None:<br/>        &quot;&quot;&quot;<br/>        Checks that a JSON response from the WebDriver does not have an error.<br/>    <br/>        :Args:<br/>         - response - The JSON response from the WebDriver server as a dictionary<br/>           object.<br/>    <br/>        :Raises: If the response contains an error message.<br/>        &quot;&quot;&quot;<br/>        status = response.get(&#x27;status&#x27;, None)<br/>        if not status or status == ErrorCode.SUCCESS:<br/>            return<br/>        value = None<br/>        message = response.get(&quot;message&quot;, &quot;&quot;)<br/>        screen: str = response.get(&quot;screen&quot;, &quot;&quot;)<br/>        stacktrace = None<br/>        if isinstance(status, int):<br/>            value_json = response.get(&#x27;value&#x27;, None)<br/>            if value_json and isinstance(value_json, str):<br/>                import json<br/>                try:<br/>                    value = json.loads(value_json)<br/>                    if len(value.keys()) == 1:<br/>                        value = value[&#x27;value&#x27;]<br/>                    status = value.get(&#x27;error&#x27;, None)<br/>                    if not status:<br/>                        status = value.get(&quot;status&quot;, ErrorCode.UNKNOWN_ERROR)<br/>                        message = value.get(&quot;value&quot;) or value.get(&quot;message&quot;)<br/>                        if not isinstance(message, str):<br/>                            value = message<br/>                            message = message.get(&#x27;message&#x27;)<br/>                    else:<br/>                        message = value.get(&#x27;message&#x27;, None)<br/>                except ValueError:<br/>                    pass<br/>    <br/>        exception_class: Type[WebDriverException]<br/>        if status in ErrorCode.NO_SUCH_ELEMENT:<br/>            exception_class = NoSuchElementException<br/>        elif status in ErrorCode.NO_SUCH_FRAME:<br/>            exception_class = NoSuchFrameException<br/>        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:<br/>            exception_class = NoSuchShadowRootException<br/>        elif status in ErrorCode.NO_SUCH_WINDOW:<br/>            exception_class = NoSuchWindowException<br/>        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:<br/>            exception_class = StaleElementReferenceException<br/>        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:<br/>            exception_class = ElementNotVisibleException<br/>        elif status in ErrorCode.INVALID_ELEMENT_STATE:<br/>            exception_class = InvalidElementStateException<br/>        elif status in ErrorCode.INVALID_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR \<br/>                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:<br/>            exception_class = InvalidSelectorException<br/>        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:<br/>            exception_class = ElementNotSelectableException<br/>        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:<br/>            exception_class = ElementNotInteractableException<br/>        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:<br/>            exception_class = InvalidCookieDomainException<br/>        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:<br/>            exception_class = UnableToSetCookieException<br/>        elif status in ErrorCode.TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.SCRIPT_TIMEOUT:<br/>            exception_class = TimeoutException<br/>        elif status in ErrorCode.UNKNOWN_ERROR:<br/>            exception_class = WebDriverException<br/>        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:<br/>            exception_class = UnexpectedAlertPresentException<br/>        elif status in ErrorCode.NO_ALERT_OPEN:<br/>            exception_class = NoAlertPresentException<br/>        elif status in ErrorCode.IME_NOT_AVAILABLE:<br/>            exception_class = ImeNotAvailableException<br/>        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:<br/>            exception_class = ImeActivationFailedException<br/>        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:<br/>            exception_class = MoveTargetOutOfBoundsException<br/>        elif status in ErrorCode.JAVASCRIPT_ERROR:<br/>            exception_class = JavascriptException<br/>        elif status in ErrorCode.SESSION_NOT_CREATED:<br/>            exception_class = SessionNotCreatedException<br/>        elif status in ErrorCode.INVALID_ARGUMENT:<br/>            exception_class = InvalidArgumentException<br/>        elif status in ErrorCode.NO_SUCH_COOKIE:<br/>            exception_class = NoSuchCookieException<br/>        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:<br/>            exception_class = ScreenshotException<br/>        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:<br/>            exception_class = ElementClickInterceptedException<br/>        elif status in ErrorCode.INSECURE_CERTIFICATE:<br/>            exception_class = InsecureCertificateException<br/>        elif status in ErrorCode.INVALID_COORDINATES:<br/>            exception_class = InvalidCoordinatesException<br/>        elif status in ErrorCode.INVALID_SESSION_ID:<br/>            exception_class = InvalidSessionIdException<br/>        elif status in ErrorCode.UNKNOWN_METHOD:<br/>            exception_class = UnknownMethodException<br/>        else:<br/>            exception_class = WebDriverException<br/>        if not value:<br/>            value = response[&#x27;value&#x27;]<br/>        if isinstance(value, str):<br/>            raise exception_class(value)<br/>        if message == &quot;&quot; and &#x27;message&#x27; in value:<br/>            message = value[&#x27;message&#x27;]<br/>    <br/>        screen = None  # type: ignore[assignment]<br/>        if &#x27;screen&#x27; in value:<br/>            screen = value[&#x27;screen&#x27;]<br/>    <br/>        stacktrace = None<br/>        st_value = value.get(&#x27;stackTrace&#x27;) or value.get(&#x27;stacktrace&#x27;)<br/>        if st_value:<br/>            if isinstance(st_value, str):<br/>                stacktrace = st_value.split(&#x27;\n&#x27;)<br/>            else:<br/>                stacktrace = []<br/>                try:<br/>                    for frame in st_value:<br/>                        line = self._value_or_default(frame, &#x27;lineNumber&#x27;, &#x27;&#x27;)<br/>                        file = self._value_or_default(frame, &#x27;fileName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if line:<br/>                            file = &quot;%s:%s&quot; % (file, line)<br/>                        meth = self._value_or_default(frame, &#x27;methodName&#x27;, &#x27;&lt;anonymous&gt;&#x27;)<br/>                        if &#x27;className&#x27; in frame:<br/>                            meth = &quot;%s.%s&quot; % (frame[&#x27;className&#x27;], meth)<br/>                        msg = &quot;    at %s (%s)&quot;<br/>                        msg = msg % (meth, file)<br/>                        stacktrace.append(msg)<br/>                except TypeError:<br/>                    pass<br/>        if exception_class == UnexpectedAlertPresentException:<br/>            alert_text = None<br/>            if &#x27;data&#x27; in value:<br/>                alert_text = value[&#x27;data&#x27;].get(&#x27;text&#x27;)<br/>            elif &#x27;alert&#x27; in value:<br/>                alert_text = value[&#x27;alert&#x27;].get(&#x27;text&#x27;)<br/>            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here<br/>&gt;       raise exception_class(message, screen, stacktrace)<br/><span class="error">E       selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: element is not attached to the page document</span><br/><span class="error">E         (Session info: chrome=97.0.4692.99)</span><br/><span class="error">E       Stacktrace:</span><br/><span class="error">E       Backtrace:</span><br/><span class="error">E       	Ordinal0 [0x0123FDC3+2555331]</span><br/><span class="error">E       	Ordinal0 [0x011D77F1+2127857]</span><br/><span class="error">E       	Ordinal0 [0x010D2E08+1060360]</span><br/><span class="error">E       	Ordinal0 [0x010D5524+1070372]</span><br/><span class="error">E       	Ordinal0 [0x010D53EE+1070062]</span><br/><span class="error">E       	Ordinal0 [0x010D5650+1070672]</span><br/><span class="error">E       	Ordinal0 [0x010FE212+1237522]</span><br/><span class="error">E       	Ordinal0 [0x010FE69B+1238683]</span><br/><span class="error">E       	Ordinal0 [0x010F4A01+1198593]</span><br/><span class="error">E       	Ordinal0 [0x01117B54+1342292]</span><br/><span class="error">E       	Ordinal0 [0x010F4984+1198468]</span><br/><span class="error">E       	Ordinal0 [0x01117C14+1342484]</span><br/><span class="error">E       	Ordinal0 [0x011275FA+1406458]</span><br/><span class="error">E       	Ordinal0 [0x01117976+1341814]</span><br/><span class="error">E       	Ordinal0 [0x010F36B6+1193654]</span><br/><span class="error">E       	Ordinal0 [0x010F4546+1197382]</span><br/><span class="error">E       	GetHandleVerifier [0x013D9622+1619522]</span><br/><span class="error">E       	GetHandleVerifier [0x0148882C+2336844]</span><br/><span class="error">E       	GetHandleVerifier [0x012D23E1+541697]</span><br/><span class="error">E       	GetHandleVerifier [0x012D1443+537699]</span><br/><span class="error">E       	Ordinal0 [0x011DD18E+2150798]</span><br/><span class="error">E       	Ordinal0 [0x011E1518+2168088]</span><br/><span class="error">E       	Ordinal0 [0x011E1660+2168416]</span><br/><span class="error">E       	Ordinal0 [0x011EB330+2208560]</span><br/><span class="error">E       	BaseThreadInitThunk [0x7625FA29+25]</span><br/><span class="error">E       	RtlGetAppContainerNamedObjectPath [0x77A87A9E+286]</span><br/><span class="error">E       	RtlGetAppContainerNamedObjectPath [0x77A87A6E+238]</span><br/><br/>..\..\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\selenium\webdriver\remote\errorhandler.py:247: StaleElementReferenceException<br/> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 97.0.4692
+Get LATEST chromedriver version for 97.0.4692 google-chrome
+Driver [C:\Users\Payan\.wdm\drivers\chromedriver\win32\97.0.4692.71\chromedriver.exe] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>INFO     WDM:logger.py:26 
+
+INFO     WDM:logger.py:26 ====== WebDriver manager ======
+INFO     WDM:logger.py:26 Current google-chrome version is 97.0.4692
+INFO     WDM:logger.py:26 Get LATEST chromedriver version for 97.0.4692 google-chrome
+INFO     WDM:logger.py:26 Driver [C:\Users\Payan\.wdm\drivers\chromedriver\win32\97.0.4692.71\chromedriver.exe] found in cache<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     FBLandingPage:FB_landing_page.py:35 attempting to enter email
+INFO     FBLandingPage:FB_landing_page.py:40 Typed email into email field successfully
+INFO     FBLandingPage:FB_landing_page.py:46 attempting to enter password
+INFO     FBLandingPage:FB_landing_page.py:50 Typed password into password field successfully
+INFO     FBLandingPage:FB_landing_page.py:57 attempting to click login
+INFO     FBHomePage:FB_home_page.py:23 attempting to click user profile
+INFO     FBHomePage:FB_home_page.py:27 clicked user profile successfully
+INFO     UserProfile:FB_user_profile_page.py:153 searching for first post that is before the given date (March 13, 2017)
+WARNING  UserProfile:base_driver.py:44 childe element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\get_child_element1644374409315.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            return parent.find_element(locator_type,child_locator)\n&#x27;] and the the line: 42
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self._execute(Command.FIND_CHILD_ELEMENT,\n&#x27;] and the the line: 735
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self._parent.execute(command, params)\n&#x27;] and the the line: 710
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:188 waiting in case of sync issue
+INFO     UserProfile:FB_user_profile_page.py:188 waiting in case of sync issue
+INFO     UserProfile:FB_user_profile_page.py:169 the current post is before the date of interest (March 12, 2017)
+INFO     UserProfile:FB_user_profile_page.py:170 We found the first post!
+INFO     UserProfile:FB_user_profile_page.py:173 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:174 March 12, 2017
+INFO     UserProfile:FB_user_profile_page.py:176 we found the first post that is before the given date of March 13, 2017 
+ the number of loops it took to get here was 129 
+ the index of the first post is 477 
+
+INFO     UserProfile:FB_user_profile_page.py:231 this is the latest post before the date of interest (March 14, 2017)
+INFO     UserProfile:FB_user_profile_page.py:232 We found the first post(to ignore)!
+INFO     UserProfile:FB_user_profile_page.py:235 JP Payano
+INFO     UserProfile:FB_user_profile_page.py:236 March 14, 2017
+INFO     UserProfile:FB_user_profile_page.py:238 we found the first post that is before the given date of March 13, 2017 
+  the index of the first post is 476 
+
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: March 14, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: March 12, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: March 3, 2017 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: February 20, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:257 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:64 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:69 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:75 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:80 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_move_to_trash_button1644374594071.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_move_to_trash_button().click()\n&#x27;] and the the line: 77
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 72
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:98 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:103 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_finalize_move_to_trash_button1644374604293.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_finalize_move_to_trash_button().click()\n&#x27;] and the the line: 100
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.FINALIZE_MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 92
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:206 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: February 12, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:257 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:64 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:69 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:75 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:80 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_move_to_trash_button1644374617213.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_move_to_trash_button().click()\n&#x27;] and the the line: 77
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 72
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:98 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:103 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_finalize_move_to_trash_button1644374627462.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_finalize_move_to_trash_button().click()\n&#x27;] and the the line: 100
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.FINALIZE_MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 92
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:206 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: February 8, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 28, 2017 name of poster: JP Payano fullText of name: JP Payano shared an episode of Robert Reich.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 23, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 15, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:257 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:64 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:69 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:75 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:78 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:98 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:101 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:206 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 10
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 13, 2017 name of poster: JP Payano fullText of name: JP Payano updated his cover photo.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 11
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 12, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:257 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:64 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:69 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:75 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:78 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:98 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:101 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:206 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 12
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 12, 2017 name of poster: JP Payano fullText of name: JP Payano shared a video from the playlist SAYS Compilations.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 13
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 12, 2017 name of poster: Dina Lovewell fullText of name: Dina Lovewell
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 14
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 9, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:257 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:64 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:69 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:75 attempting to click move to trash button
+INFO     UserProfile:FB_user_profile_page.py:78 clicked move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:98 attempting to click on the final move to trash button
+INFO     UserProfile:FB_user_profile_page.py:101 clicked on the final move to trash button successfully
+INFO     UserProfile:FB_user_profile_page.py:206 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:294 the number of total posts in the DOM is 490
+INFO     UserProfile:FB_user_profile_page.py:295 The number of posts gone through last loop are 14
+INFO     UserProfile:FB_user_profile_page.py:296 The number of posts deleted last time were 5
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 1
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: March 14, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 2
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: March 12, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 3
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: March 3, 2017 name of poster: JP Payano fullText of name: JP Payano updated his profile picture.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 4
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: February 20, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:257 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:64 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:69 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:75 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:80 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_move_to_trash_button1644374673601.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_move_to_trash_button().click()\n&#x27;] and the the line: 77
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 72
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:98 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:103 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_finalize_move_to_trash_button1644374684243.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_finalize_move_to_trash_button().click()\n&#x27;] and the the line: 100
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.FINALIZE_MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 92
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:206 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 5
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: February 12, 2017 name of poster: JP Payano fullText of name: JP Payano
+INFO     UserProfile:FB_user_profile_page.py:257 current post meets the criteria
+INFO     UserProfile:FB_user_profile_page.py:64 attempting to click the options for this post button
+INFO     UserProfile:FB_user_profile_page.py:69 clicked on options button successfully
+INFO     UserProfile:FB_user_profile_page.py:75 attempting to click move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:80 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_move_to_trash_button1644374698015.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_move_to_trash_button().click()\n&#x27;] and the the line: 77
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 72
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:98 attempting to click on the final move to trash button
+WARNING  UserProfile:FB_user_profile_page.py:103 element did not exist
+WARNING  handle_exception:utils.py:122 the type of exception: NoSuchElementException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\click_finalize_move_to_trash_button1644374708337.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.get_finalize_move_to_trash_button().click()\n&#x27;] and the the line: 100
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.driver.find_element(By.XPATH,self.FINALIZE_MOVE_TO_TRASH_BUTTON)\n&#x27;] and the the line: 92
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(Command.FIND_ELEMENT, {\n&#x27;] and the the line: 1244
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+INFO     UserProfile:FB_user_profile_page.py:206 post hase been deleted
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 6
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: February 8, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 7
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 28, 2017 name of poster: JP Payano fullText of name: JP Payano shared an episode of Robert Reich.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 8
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 23, 2017 name of poster: JP Payano fullText of name: JP Payano updated his status.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 9
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 13, 2017 name of poster: JP Payano fullText of name: JP Payano updated his cover photo.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 10
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 12, 2017 name of poster: JP Payano fullText of name: JP Payano shared a video from the playlist SAYS Compilations.
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 11
+INFO     UserProfile:FB_user_profile_page.py:251 the criteria is as follows username: JP Payano date:March 13, 2017
+INFO     UserProfile:FB_user_profile_page.py:252 date of post: January 12, 2017 name of poster: Dina Lovewell fullText of name: Dina Lovewell
+INFO     UserProfile:FB_user_profile_page.py:259 the current post does NOT meet criteria
+INFO     UserProfile:FB_user_profile_page.py:280 this is post number 12
+WARNING  handle_exception:utils.py:122 the type of exception: StaleElementReferenceException
+WARNING  handle_exception:utils.py:123 the name of the screenshot for this exception is: C:\Users\Payan\Desktop\FB Project\screenshots\scroll_to_element1644374723039.png
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.driver.execute_script(&quot;arguments[0].scrollIntoView();&quot;, element)\n&#x27;] and the the line: 50
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        return self.execute(command, {\n&#x27;] and the the line: 878
+WARNING  handle_exception:utils.py:126 the function: [&#x27;            self.error_handler.check_response(response)\n&#x27;] and the the line: 424
+WARNING  handle_exception:utils.py:126 the function: [&#x27;        raise exception_class(message, screen, stacktrace)\n&#x27;] and the the line: 247
+WARNING  UserProfile:base_driver.py:60 stale reference but trying again
+WARNING  UserProfile:base_driver.py:65 stale reference tried twice<br/></div></td></tr></tbody></table></body></html>
