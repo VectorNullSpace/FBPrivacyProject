@@ -1,4 +1,3 @@
-import traceback
 import inspect
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -46,12 +45,15 @@ class BaseDriver:
             
             return "no child element found"
         except StaleElementReferenceException:
-            self.log.warning("Stale reference found in the get child method")
-            ExceptionHandler.handle_exception("StaleElementReferenceException",self.take_screenshot())
+            self.log.warning("stale element exception found in the get child method of the base driver waiting 5 seconds and retrying")
+            time.sleep(5)
+            try:
+                return parent.find_element(locator_type,child_locator)
+            except StaleElementReferenceException:
+                self.log.warning("Stale reference found in the get child method")
+                ExceptionHandler.handle_exception("StaleElementReferenceException",self.take_screenshot())
             
             return "child element reference was stale"
-
-
 
     def scroll_to_element(self,element):
         try:
@@ -78,7 +80,6 @@ class BaseDriver:
                 ExceptionHandler.handle_exception("StaleElementReferenceException",self.take_screenshot())
                 
                 return False
-
     
     def take_screenshot(self):
         function_name = inspect.stack()[1][3] + str(int(round(time.time() * 1000))) + ".png"

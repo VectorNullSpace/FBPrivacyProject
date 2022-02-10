@@ -1,10 +1,9 @@
 from selenium.webdriver.common.by import By
-import time
 from selenium.common.exceptions import NoSuchElementException
 from base.base_driver import BaseDriver
 from pages.FB_home_page import FBHomePage
 from utilities.utils import Utils, ExceptionHandler
-import traceback
+
 
 class FBLandingPage(BaseDriver):
     log = Utils.custom_logger()

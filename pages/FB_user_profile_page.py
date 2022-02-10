@@ -1,7 +1,4 @@
 
-import traceback
-from ast import While
-from email import utils
 import time
 from base.base_driver import BaseDriver
 from selenium.webdriver.common.by import  By
@@ -61,6 +58,7 @@ class UserProfile(BaseDriver):
         options = self.get_options_for_this_post(post)
         self.log.info("attempting to click the options for this post button")
         if type(options) == str:
+            self.log.info(self.take_screenshot())
             return options
         else:
             options.click()
