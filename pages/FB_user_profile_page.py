@@ -17,8 +17,7 @@ class UserProfile(BaseDriver):
         self.achains = achains
  
     POST_ELEMENTS = "//div[@data-pagelet='ProfileTimeline']//div[@class='du4w35lb k4urcfbm l9j0dhe7 sjgh65i0']"
-    DATE_ELEMENT_CHILD = ".//div[@class='qzhwtbm6 knvmm38d'][2]//a[@href='#']"
-    #".//div[@class='qzhwtbm6 knvmm38d'][2]//a[@href='#']" this is the original testing if removing the href part causes issues
+    DATE_ELEMENT_CHILD = ".//div[@class='qzhwtbm6 knvmm38d'][2]//a"
     MOVE_TO_TRASH_BUTTON = "//span[normalize-space()='Move to trash']"
     FINALIZE_MOVE_TO_TRASH_BUTTON = "//div[@aria-label='Move'][1]"
     CANCEL_MOVE_TO_TRASH_BUTTON = "(//div[@aria-label='Cancel'])[2]"
@@ -31,7 +30,6 @@ class UserProfile(BaseDriver):
         # return self.driver.find_element(By.XPATH,self.USERS_NAME).text
         return "JP Payano"
         
-
     def get_all_posts(self):
         return self.wait_for_presence_of_all_elements(By.XPATH,self.POST_ELEMENTS)
 
@@ -79,11 +77,12 @@ class UserProfile(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
+            
+            raise Exception("sorry the click to emove to trash button doesnt exist")
 
         except ElementClickInterceptedException:
             ExceptionHandler.handle_exception("ElementClickInterceptedException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
+            
 
             self.log.warning("element click intercepted attempting to move a little and retry")
             script = "window.scrollBy(0,400);"
@@ -104,10 +103,9 @@ class UserProfile(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
             
-
-
+            raise Exception("sorry the click to finalize move to trash button doesnt exist")
+            
     def click_cancel_move_to_trash_button(self):
         self.log.info("attempting to click on the cancel move to trash button")
         try:
@@ -116,9 +114,9 @@ class UserProfile(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
+            
+            raise Exception("sorry the click to cancel  move to trash button doesnt exist")
 
-    
     def go_through_posts(self):
         username = self.get_users_name()
         dateOfInterestTempVar = "December 9, 2020"
@@ -172,6 +170,7 @@ class UserProfile(BaseDriver):
                 if Utils.is_before(dateOfInterest,date):
                     self.log.info("the current post is before the date of interest ({})".format(date))
                     self.log.info("We found the first post!")
+                    self.log.info("the number of looops it took to find the first post wase {}".format(numberOfLoops))
                     totalPosts = len(posts)
                     poster = self.get_name_of_poster(lastPost)
                     self.log.info(poster)
@@ -184,11 +183,12 @@ class UserProfile(BaseDriver):
                 else:
                     self.log.debug("the current post is NOT before the date of interest ({})".format(date))
             
+            self.log.info("number of times gone to the bottom {}".format(numberOfLoops))
             numberOfLoops = numberOfLoops + 1
             posts = self.get_all_posts()
             if len(posts) == totalPosts:
                 #give it a second to load and check again. occasionally there is a sync issue
-                time.sleep(4)
+                time.sleep(8)
                 self.log.info("waiting in case of sync issue")
                 posts = self.get_all_posts()
                 if len(posts) == totalPosts:
@@ -287,6 +287,7 @@ class UserProfile(BaseDriver):
             totalPostslookedat = 0
             totalPostsDeleted = 0
             while match == False:
+                time.sleep(2)
                 for i in range(startingPostIndex,totalPosts):
                     totalPostslookedat = totalPostslookedat + 1
                     numberOfPostsLookedAt = numberOfPostsLookedAt + 1
@@ -298,8 +299,10 @@ class UserProfile(BaseDriver):
                         if self.delete_post(post):
                             numberOfPostsDeleted = numberOfPostsDeleted + 1
                             totalPostsDeleted = totalPostsDeleted + 1
-
-                        
+                self.log.info("the index used for the for loop was {}".format(startingPostIndex))
+                self.log.info("the number of total posts in the DOM is {}".format(totalPosts))
+                self.log.info("the number of posts looked at are {numberOfPosts} and the number of deleted among them are {numberOfPostsDeleted}".format(numberOfPosts = totalPostslookedat,numberOfPostsDeleted=totalPostsDeleted))
+                self.log.info("the number of loops around were {}".format(numberOfLoops))       
 
                 if totalPostslookedat > 30:
                     self.log.info("the number of posts looked at are {numberOfPosts} and the number of deleted among them are {numberOfPostsDeleted}".format(numberOfPosts = totalPostslookedat,numberOfPostsDeleted=totalPostsDeleted))
@@ -310,10 +313,11 @@ class UserProfile(BaseDriver):
                     self.log.info("the number of total posts in the DOM is {}".format(totalPosts))
                     self.log.info("The number of posts gone through last loop are {}".format(numberOfPostsLookedAt))
                     self.log.info("The number of posts deleted last time were {}".format(numberOfPostsDeleted))
+                    
+                    posts = self.get_all_posts()
+                    startingPostIndex = startingPostIndex + numberOfPostsLookedAt - numberOfPostsDeleted 
                     numberOfPostsLookedAt = 0
                     numberOfPostsDeleted = 0
-                    posts = self.get_all_posts()
-                    startingPostIndex = startingPostIndex + totalPostslookedat - totalPostsDeleted 
                     totalPosts = len(posts)
                     numberOfLoops = numberOfLoops + 1
 

@@ -43,7 +43,7 @@ class FBLandingPage(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
+            
             
     def enterPassword(self,password):
         self.log.info("attempting to enter password")
@@ -54,8 +54,7 @@ class FBLandingPage(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
-
+            
 
     def clickLogin(self):
         self.log.info("attempting to click login")
@@ -64,7 +63,7 @@ class FBLandingPage(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
+            
 
      
     def loginToFB(self):

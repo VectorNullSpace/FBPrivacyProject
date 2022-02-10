@@ -41,10 +41,17 @@ class BaseDriver:
         try:
             return parent.find_element(locator_type,child_locator)
         except NoSuchElementException:
-            self.log.warning("childe element did not exist")
+            self.log.warning("child element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
+            
             return "no child element found"
+        except StaleElementReferenceException:
+            self.log.warning("Stale reference found in the get child method")
+            ExceptionHandler.handle_exception("StaleElementReferenceException",self.take_screenshot())
+            
+            return "child element reference was stale"
+
+
 
     def scroll_to_element(self,element):
         try:
@@ -52,19 +59,25 @@ class BaseDriver:
             height = element.size['height']
             script = "window.scrollBy(0,-{});".format(height/2)
             self.driver.execute_script(script)
+            return True
 
         except StaleElementReferenceException:
             ExceptionHandler.handle_exception("StaleElementReferenceException",self.take_screenshot())
+            
             self.driver.execute_script("window.scrollBy(0 , 4000 );")
             try:
                 time.sleep(2)
                 self.log.warning("stale reference but trying again")
+                self.driver.execute_script("arguments[0].scrollIntoView();", element)
                 height = element.size['height']
                 script = "window.scrollBy(0,-{});".format(height/2)
                 self.driver.execute_script(script)
+                return True
             except StaleElementReferenceException:
                 self.log.warning("stale reference tried twice")
-                return "tried to find element twice but it not work"
+                ExceptionHandler.handle_exception("StaleElementReferenceException",self.take_screenshot())
+                
+                return False
 
     
     def take_screenshot(self):

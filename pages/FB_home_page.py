@@ -29,7 +29,7 @@ class FBHomePage(BaseDriver):
         except NoSuchElementException:
             self.log.warning("element did not exist")
             ExceptionHandler.handle_exception("NoSuchElementException",self.take_screenshot())
-            self.log.warning(traceback.extract_stack())
+            
 
 
     def navigateToUserProfile(self):

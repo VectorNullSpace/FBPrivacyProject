@@ -121,5 +121,5 @@ class ExceptionHandler():
         log.warning("the type of exception: {}".format(exceptionName))
         log.warning("the name of the screenshot for this exception is: {}".format(screenshotname))
         # log.warning(traceback.format_exc())
-        # for frame in inspect.trace():
-        #     log.warning("the function: {} and the the line: {}".format(frame.code_context,frame.lineno))
+        for frame in inspect.trace():
+            log.warning("the function: {} and the the line: {}".format(frame.code_context,frame.lineno))
