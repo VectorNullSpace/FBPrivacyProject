@@ -24,8 +24,7 @@ class UserProfile(BaseDriver):
     OPTIONS_FOR_THIS_POST = ".//div[@aria-label='Actions for this post'][1]"
 
     def get_users_name(self):
-        # return self.driver.find_element(By.XPATH,self.USERS_NAME).text
-        return "JP Payano"
+        return self.driver.find_element(By.XPATH,self.USERS_NAME).text
         
     def get_all_posts(self):
         return self.wait_for_presence_of_all_elements(By.XPATH,self.POST_ELEMENTS)
@@ -292,7 +291,7 @@ class UserProfile(BaseDriver):
                     post = posts[i]
                     self.log.info("this is post number {}".format(numberOfPostsLookedAt))
                     self.scroll_to_element(post)
-                    time.sleep(2)
+                    time.sleep(1)
                     if self.postMeetsCriteria(post,dateOfInterest,usersName):
                         if self.delete_post(post):
                             numberOfPostsDeleted = numberOfPostsDeleted + 1
@@ -301,10 +300,14 @@ class UserProfile(BaseDriver):
                 self.log.info("the number of total posts in the DOM is {}".format(totalPosts))
                 self.log.info("the number of posts looked at are {numberOfPosts} and the number of deleted among them are {numberOfPostsDeleted}".format(numberOfPosts = totalPostslookedat,numberOfPostsDeleted=totalPostsDeleted))
                 self.log.info("the number of loops around were {}".format(numberOfLoops))       
+                self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                time.sleep(2)
+                posts = self.get_all_posts()
 
-                if totalPostslookedat > 30:
+                if len(posts) == totalPosts:
                     self.log.info("the number of posts looked at are {numberOfPosts} and the number of deleted among them are {numberOfPostsDeleted}".format(numberOfPosts = totalPostslookedat,numberOfPostsDeleted=totalPostsDeleted))
                     self.log.info("the number of loops around were {}".format(numberOfLoops))
+                    self.log.info(self.take_screenshot())
                     match = True
                     break
                 else:
@@ -312,7 +315,6 @@ class UserProfile(BaseDriver):
                     self.log.info("The number of posts gone through last loop are {}".format(numberOfPostsLookedAt))
                     self.log.info("The number of posts deleted last time were {}".format(numberOfPostsDeleted))
                     
-                    posts = self.get_all_posts()
                     startingPostIndex = startingPostIndex + numberOfPostsLookedAt - numberOfPostsDeleted 
                     numberOfPostsLookedAt = 0
                     numberOfPostsDeleted = 0
